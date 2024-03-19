@@ -42,11 +42,7 @@ const Hero = () => {
 
           <div className='text-center z-10'>
             <p 
-            className='font-heading1 text-7xl md:text-8xl md: pb-5 tracking-wider text-orange-400 animate__animated animate__fadeInUp'>Tiffan Bae</p>
-            
-            <p 
-            className='font-heading2 text-3xl md:text-5xl text-wrap font-bold tracking-wider text-white leading-loose animate__animated animate__zoomIn animate__delay-1s'
-            >SIZZLING & SCRUMPTIOUS</p>
+            className='font-heading1 text-7xl md:text-8xl md: pb-5 tracking-wider text-orange-400 animate__animated animate__fadeInUp'>Sadaqa Aid</p>
           </div>
 
           <Link href='/' className='text-white text-6xl md:text-8xl font-light opacity-80' onClick={handleNextImage}>
