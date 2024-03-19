@@ -1,7 +1,8 @@
-import formData from 'form-data';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import FormData from 'form-data';
 import Mailgun from 'mailgun.js';
   
-  export default async function handler(req, res) {
+  export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   console.log('Data', req.body)
 
   const { firstName, lastName, email, phoneNumber, message } = req.body
@@ -9,7 +10,7 @@ import Mailgun from 'mailgun.js';
   const API_KEY = process.env.MAILGUN_API_KEY || ''
   const DOMAIN = process.env.MAILGUN_DOMAIN || ''
 
-  const mailgun = new Mailgun(formData);
+  const mailgun = new Mailgun(FormData);
   const client = mailgun.client({username: 'api', key: API_KEY});
 
   const messageData = {
