@@ -6,7 +6,7 @@ import Hero from './Components/Hero'
 
 export default async function Home() {
   return (
-    <div className='mw-screen mh-screen overflow-hidden'>
+    <div className='w-screen h-screen overflow-hidden'>
       <NavMenu />
       <Scroll_to_top />
       <Whatsapp />

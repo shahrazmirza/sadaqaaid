@@ -21,9 +21,9 @@ const NavMenu = () => {
   }, []);
 
   return (
-    <div className='bg-gray-800 py-10'>
+    <div className='bg-gray-800 py-10 z-10 w-screen'>
       <Container
-        className={`fixed top-0 left-0 right-0 w-screen z-10 transition-transform transform ${
+        className={`fixed top-0 left-0 right-0 transition-transform transform ${
           isScrolled ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
@@ -42,7 +42,7 @@ const NavMenu = () => {
             </Link>
           </div>
           <div className='flex text-base'>
-            <Link href='/' className='px-6 text-yellow-400'>
+            <Link href='/' className='px-6 text-yellow-500'>
               Home
             </Link>
 
