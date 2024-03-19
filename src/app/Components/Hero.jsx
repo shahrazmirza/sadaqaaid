@@ -26,7 +26,7 @@ const Hero = () => {
           className='pb-20 opacity-25'
         />
       </div>
-      <div className='absolute right-20 top-0 h-full flex items-center'>
+      <div className='absolute right-0 md:right-20 top-0 h-full flex items-center'>
         <DonationBox />
       </div>
     </div>

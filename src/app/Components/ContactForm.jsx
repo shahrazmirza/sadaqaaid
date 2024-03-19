@@ -76,7 +76,7 @@ export const ContactForm = () => {
     <Container>
       <div className='flex flex-col-reverse md:flex md:flex-row w-full px-10 pt-10'>
         <div className='flex flex-col md:w-2/4 pr-24'>
-          <p className='text-2xl/loose font-normal text-gray-800 font-heading2'>GET IN TOUCH</p>
+          <p className='text-2xl/loose font-normal text-gray-800 font-heading2 pt-5'>GET IN TOUCH</p>
           <p className='text-base/loose font-normal text-gray-800 pt-2'>If you have any questions, please feel free to contact us. We will love to answer all your queries.</p>
           <p className='text-2xl/loose font-normal text-gray-800 font-heading2 pt-5'>CALL US</p>
           <div className='flex items-center pt-2'>
