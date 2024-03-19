@@ -22,7 +22,8 @@ export default function DonationBox() {
             <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$1000</Button>
           </div>
           <div className="flex justify-center items-center bg-white text-gray-800">
-            <Input className='text-md font-bold' type="custom" label="$" placeholder="   Custom Amount" />
+            <p className="pl-2">$</p>
+            <Input className='text-md font-bold' type="custom" label="" placeholder="Custom Amount" />
           </div>
         </div >
         <Button className="m-2 rounded-lg  bg-green-700 text-white py-2 text-xl">Donate</Button>
