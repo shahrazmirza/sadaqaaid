@@ -42,7 +42,7 @@ const NavMenu = () => {
             </Link>
           </div>
           <div className='flex text-base'>
-            <Link href='/' className='px-6 text-yellow-500'>
+            <Link href='/' className='px-6 text-yellow-300'>
               Home
             </Link>
 
