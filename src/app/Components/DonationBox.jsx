@@ -1,12 +1,21 @@
 'use client'
 import { Container } from "@radix-ui/themes";
-import React from "react";
-import {Input, Button} from "@nextui-org/react";
+import React, { useState } from "react";
+import { Button} from "@nextui-org/react";
 
 export default function DonationBox() {
+  
+  const [amount, setAmount] = useState('');
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    const formattedValue = inputValue.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    setAmount(formattedValue);
+  };
+    
   return (
     <Container>
-      <div className="flex flex-col w-fit gap-5 text-white bg-gray-800 rounded-lg p-5 z-20">
+      <div className="flex flex-col w-fit gap-5 text-white bg-black rounded-lg p-5 z-20">
         <h1 className="flex justify-center text-3xl">Donate Now</h1>
         <div className="grid grid-cols-2 m-2 rounded-lg bg-yellow-300 text-gray-800">
           <Button className='text-lg font-bold p-2 border-r border-gray-400' type="radio">SADAQA</Button>
@@ -22,8 +31,14 @@ export default function DonationBox() {
             <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$1000</Button>
           </div>
           <div className="flex justify-center items-center bg-white text-gray-800">
-            <p className="pl-2">$</p>
-            <Input className='text-md font-bold' type="custom" label="" placeholder="Custom Amount" />
+            <p className="px-2">$</p>
+            <input
+              className='text-md font-bold border-none focus:outline-none pl-2'
+              type="text"
+              value={amount}
+              onChange={handleInputChange}
+              placeholder="Custom Amount"
+            />
           </div>
         </div >
         <Button className="m-2 rounded-lg  bg-green-700 text-white py-2 text-xl">Donate</Button>
