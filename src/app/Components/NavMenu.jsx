@@ -37,7 +37,9 @@ const NavMenu = () => {
                 height='30'
               />
             </Link>
-            <h1 className='text-2xl font-basic tracking-wider'>SADAQA AID</h1>
+            <Link href='/'>
+              <h1 className='text-2xl font-basic tracking-wider'>SADAQA AID</h1>
+            </Link>
           </div>
           <div className='flex text-base'>
             <Link href='/' className='px-6 text-yellow-400'>
