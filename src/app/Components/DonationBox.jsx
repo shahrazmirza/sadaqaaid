@@ -6,6 +6,9 @@ import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
 export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
+
+  const [selectedValue, setSelectedValue] = useState("");  // Initial empty string
+
     
   return (
     <Container>
@@ -16,7 +19,7 @@ export default function DonationBox() {
           label="Select Donation Type"
           orientation="horizontal"
           defaultValue=""
-          isInvalid={true}
+          isInvalid={!selectedValue}
           errorMessage="Please select a donation type"
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
@@ -31,9 +34,9 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Amount"
           orientation="horizontal"
-          defaultValue=""
-          isInvalid={true}
-          errorMessage="Please select or enter a custom amount"
+          // defaultValue=""
+          // isInvalid={true}
+          // errorMessage="Please select or enter a custom amount"
         >
           <Radio value="50" >$50</Radio>
           <Radio value="100">$100</Radio>
