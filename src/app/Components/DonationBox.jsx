@@ -48,20 +48,20 @@ export default function DonationBox() {
           <Radio value="250">$250</Radio>
           <Radio value="500">$500</Radio>
           <Radio value="1000">$1,000</Radio>
-          <Radio value="custom"></Radio>
-            <div className="w-32">
+          <Radio value="custom"><div className="w-32">
               <Input
                 isClearable
                 type="text"
                 label="Custom Amount"
-                variant="bordered"
+                variant=""
                 placeholder="$"
                 defaultValue=""
-                onClear={() => console.log("input cleared")}
+                // onClear={() => console.log("input cleared")}
                 onChange={handleInputChange}
                 className="max-w-xs"
               />
-            </div>
+            </div></Radio>
+            
         </RadioGroup>
 
         {/* <p className="text-xl px-2">Select Amount</p>
