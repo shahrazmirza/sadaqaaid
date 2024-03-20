@@ -35,11 +35,6 @@ export default function DonationBox() {
           <Radio value="zakat" size="lg">Zakat</Radio>
         </RadioGroup>
         
-        {/* <div className="grid grid-cols-2 m-2 gap-5">
-          <Button className='text-lg font-bold p-2' type="radio">SADAQA</Button>
-          <Button className='text-lg font-bold p-2' type="radio">ZAKAT</Button>
-        </div> */}
-
         <RadioGroup
           label="Select Amount"
           orientation="horizontal"
@@ -67,29 +62,9 @@ export default function DonationBox() {
             </div>
         </RadioGroup>
 
-        {/* <p className="text-xl px-2">Select Amount</p>
-        <div className="flex flex-col md:flex-row m-2 ">
-          <div className="grid grid-cols-5 gap-2">
-            <Button className='flex justify-center text-lg font-bold py-2' color="warning" type="radio">$50</Button>
-            <Button className='flex justify-center text-lg font-bold py-2' color="warning" type="radio">$100</Button>
-            <Button className='flex justify-center text-lg font-bold py-2' color="warning" type="radio">$250</Button>
-            <Button className='flex justify-center text-lg font-bold py-2' color="warning" type="radio">$500</Button>
-            <Button className='flex justify-center text-lg font-bold py-2' color="warning" type="radio">$1000</Button>
-          </div>
-          <div className="flex justify-center items-center">
-            <p className="px-2">$</p>
-            <input
-              className='text-md font-bold py-2 pl-2 w-36'
-              type="text"
-              value={amount}
-              onChange={handleInputChange}
-              placeholder="Custom Amount"
-            />
-          </div>
-        </div > */}
-        <button 
+        <Button 
           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
-          onClick={handleCheckout}>Donate</button>
+          onClick={handleCheckout}>Donate</Button>
       </div>
     </Container>
   );
