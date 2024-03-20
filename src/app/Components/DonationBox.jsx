@@ -5,14 +5,6 @@ import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
 
 export default function DonationBox() {
   
-  const [amount, setAmount] = useState('');
-
-  const handleInputChange = (event) => {
-    const inputValue = event.target.value;
-    const formattedValue = inputValue.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    setAmount(formattedValue);
-  };
-
   const sizes = ["sm", "md", "lg"];
     
   return (
@@ -57,8 +49,7 @@ export default function DonationBox() {
                 variant=""
                 placeholder="$"
                 defaultValue=""
-                // onClear={() => console.log("input cleared")}
-                onChange={handleInputChange}
+                onClear={() => console.log("input cleared")}
                 className="max-w-xs"
               />
             </div>
