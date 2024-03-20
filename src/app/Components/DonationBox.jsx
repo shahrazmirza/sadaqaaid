@@ -36,31 +36,33 @@ export default function DonationBox() {
         </RadioGroup>
         
         <RadioGroup
-          label="Select Amount"
-          orientation="horizontal"
-          defaultValue="custom"
-          isInvalid={""}
-          errorMessage={"" ? "PPlease select or enter a custom amount" : ""}
-        >
-          <Radio value="50" >$50</Radio>
-          <Radio value="100">$100</Radio>
-          <Radio value="250">$250</Radio>
-          <Radio value="500">$500</Radio>
-          <Radio value="1000">$1,000</Radio>
-          <Radio value="custom"></Radio>
-            <div className="w-32">
-              <Input
-                isClearable
-                type="text"
-                label="Custom Amount"
-                variant=""
-                placeholder="$"
-                defaultValue=""
-                onClear={() => console.log("input cleared")}
-                className="max-w-xs"
-              />
-            </div>
-        </RadioGroup>
+  label="Select Amount"
+  orientation="horizontal"
+  defaultValue="custom"
+  isInvalid={""}
+  errorMessage={"" ? "Please select or enter a custom amount" : ""}
+>
+  <Radio name="amount" value="50">$50</Radio>
+  <Radio name="amount" value="100">$100</Radio>
+  <Radio name="amount" value="250">$250</Radio>
+  <Radio name="amount" value="500">$500</Radio>
+  <Radio name="amount" value="1000">$1,000</Radio>
+  <Radio name="amount" value="custom"></Radio>
+  <div className="w-32">
+    <Input
+      name="customAmount"
+      isClearable
+      type="text"
+      label="Custom Amount"
+      variant=""
+      placeholder="$"
+      defaultValue=""
+      onClear={() => console.log("input cleared")}
+      className="max-w-xs"
+    />
+  </div>
+</RadioGroup>
+
         
         <Button 
           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
