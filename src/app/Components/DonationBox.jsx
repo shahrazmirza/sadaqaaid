@@ -26,7 +26,6 @@ export default function DonationBox() {
           defaultValue=""
           isInvalid={true}
           errorMessage="Please select a donation type"
-          onClear={() => console.log("input cleared")}
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
           <Radio value="zakat" size="lg">Zakat</Radio>
@@ -51,7 +50,17 @@ export default function DonationBox() {
           <Radio value="1000">$1,000</Radio>
           <Radio value="custom"></Radio>
             <div className="w-32">
-              <Input type="text" label="Custom Amount" placeholder="$"value={amount} onChange={handleInputChange}/>
+              <Input
+                isClearable
+                type="text"
+                label="Custom Amount"
+                variant="bordered"
+                placeholder="$"
+                defaultValue=""
+                onClear={() => console.log("input cleared")}
+                onChange={handleInputChange}
+                className="max-w-xs"
+              />
             </div>
         </RadioGroup>
 
