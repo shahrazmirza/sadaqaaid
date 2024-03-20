@@ -31,9 +31,9 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Amount"
           orientation="horizontal"
-          // defaultValue=""
-          // isInvalid={true}
-          // errorMessage="Please select or enter a custom amount"
+          defaultValue="custom"
+          isInvalid={""}
+          errorMessage={"" ? "PPlease select or enter a custom amount" : ""}
         >
           <Radio value="50" >$50</Radio>
           <Radio value="100">$100</Radio>
