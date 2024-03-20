@@ -23,8 +23,8 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Donation Type"
           orientation="horizontal"
-          defaultValue=""
-          isInvalid={true}
+          defaultValue="none"
+          isInvalid={false}
           errorMessage="Please select a donation type"
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
