@@ -7,6 +7,34 @@ export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
 
+  const handleCheckout = async () => {
+    if (!selectedMethod) {
+      return toast.error("Please select a method");
+    } else if (
+      selectedMethod.toLowerCase() === "delivery" &&
+      !selectedSuburb
+    ) {
+      return toast.error("Please choose your delivery suburb");
+    } else if (
+      selectedMethod.toLowerCase() === "delivery" &&
+      selectedSuburb &&
+      !deliveryAddress
+    ) {
+      return toast.error("Please enter your delivery address");
+    } else {
+      try {
+        const response = await axios.post(
+          'api/checkout_sessions',
+          { cartItem: cart.cartItems }
+        );
+        console.log(response);
+        window.location = response.data.sessionURL;
+      } catch (error) {
+        console.error("Error creating checkout session:", error);
+      }
+    }
+  };
+
   return (
     <Container>
       <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-5 z-20">
@@ -75,7 +103,7 @@ export default function DonationBox() {
             />
           </div>
         </div > */}
-        <Button className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl">Donate</Button>
+        <Button onClick={handleCheckout} className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl">Donate</Button>
       </div>
     </Container>
   );
