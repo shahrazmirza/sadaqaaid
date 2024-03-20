@@ -42,7 +42,7 @@ export default function DonationBox() {
           <Radio value="250">$250</Radio>
           <Radio value="500">$500</Radio>
           <Radio value="1000">$1,000</Radio>
-          <Radio value="1000">
+          <Radio value="custom">
             <div className="w-32">
               <Input type="text" label="Custom Amount" placeholder="$"value={amount} onChange={handleInputChange}/>
             </div>
