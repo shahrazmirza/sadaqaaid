@@ -12,7 +12,7 @@ export default function DonationBox() {
     await checkout({
       lineItems: [
         {
-          price: "price_1OwH9LHPIvs440h63Rs6yYoc",
+          price: "50",
           quantity: 1
         }
       ]
