@@ -1,25 +1,46 @@
-import { loadStripe } from "@stripe/stripe-js";
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export async function checkout({lineItems}){
-	let stripePromise = null
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    const { amount, donationType } = req.body;
 
-	const getStripe = () => {
-		if(!stripePromise) {
-			stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
-		}
-		return stripePromise
-	}
+    if (!amount || amount <= 0 || !donationType) {
+      return res.status(400).json({ error: 'Invalid donation details' });
+    }
 
-	const stripe = await getStripe()
+    const transformedItems = [
+      {
+        price_data: {
+          currency: 'aud',
+          product_data: {
+            name: `${donationType} - $${amount.toLocaleString()}`,
+          },
+          unit_amount: amount * 100,
+        },
+        quantity: 1,
+      },
+    ];
 
-	await stripe.redirectToCheckout({
-		mode: 'payment',
-		lineItems,
-		successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
-		cancelUrl: window.location.origin
-	})
-
+    try {
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        mode: 'payment',
+        success_url: `${req.headers.origin}/Success`,
+        cancel_url: `${req.headers.origin}/Cancel`,
+        line_items: transformedItems,
+      });
+      res.json({ sessionURL: session.url });
+    } catch (err) {
+      console.error("Error creating checkout session:", err);
+      res.status(500).json({ error: 'Error creating checkout session' });
+    }
+  } else {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+  }
 }
+
+
 
 // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -32,11 +53,10 @@ export async function checkout({lineItems}){
 //             price_data: {
 //                 currency: "aud",
 //                 product_data: {
-//                   name: `${item.name.toUpperCase()} - ${item.size}`,
+//                   name: `${item.type.toUpperCase()} - ${item.value}`,
 //                 },
-//                 unit_amount: item.price * 100,
+//                 unit_amount: item.value * 100,
 //             },
-//             quantity: item.quantity,
 //         }))
 
 //     try {
@@ -55,4 +75,27 @@ export async function checkout({lineItems}){
 //     res.setHeader('Allow', 'POST');
 //     res.status(405).end('Method Not Allowed');
 //   }
+// }
+
+// import { loadStripe } from "@stripe/stripe-js";
+
+// export async function checkout({lineItems}){
+// 	let stripePromise = null
+
+// 	const getStripe = () => {
+// 		if(!stripePromise) {
+// 			stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+// 		}
+// 		return stripePromise
+// 	}
+
+// 	const stripe = await getStripe()
+
+// 	await stripe.redirectToCheckout({
+// 		mode: 'payment',
+// 		lineItems,
+// 		successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
+// 		cancelUrl: window.location.origin
+// 	})
+
 // }
