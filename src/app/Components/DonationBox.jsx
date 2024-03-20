@@ -1,5 +1,4 @@
 'use client'
-'use client'
 import { Container } from "@radix-ui/themes";
 import React, { useState, useEffect } from "react";
 import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
