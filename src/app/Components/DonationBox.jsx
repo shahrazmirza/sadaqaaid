@@ -48,7 +48,8 @@ export default function DonationBox() {
           <Radio value="250">$250</Radio>
           <Radio value="500">$500</Radio>
           <Radio value="1000">$1,000</Radio>
-          <Radio value="custom"><div className="w-32">
+          <Radio value="custom"></Radio>
+            <div className="w-32">
               <Input
                 isClearable
                 type="text"
@@ -60,8 +61,7 @@ export default function DonationBox() {
                 onChange={handleInputChange}
                 className="max-w-xs"
               />
-            </div></Radio>
-            
+            </div>
         </RadioGroup>
 
         {/* <p className="text-xl px-2">Select Amount</p>
