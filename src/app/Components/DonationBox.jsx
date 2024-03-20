@@ -24,8 +24,8 @@ export default function DonationBox() {
           label="Select Donation Type"
           orientation="horizontal"
         >
-          <Radio value="sadaqa" size="lg">SADAQA</Radio>
-          <Radio value="zakat" size="lg">ZAKAT</Radio>
+          <Radio value="sadaqa" size="lg">Sadaqa</Radio>
+          <Radio value="zakat" size="lg">Zakat</Radio>
         </RadioGroup>
         
         {/* <div className="grid grid-cols-2 m-2 gap-5">
