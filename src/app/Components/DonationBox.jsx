@@ -82,7 +82,7 @@ export default function DonationBox() {
             checkout({
               lineItems: [
                 {
-                  price: "50",
+                  price: "prod_Plom4Gt1itXa3R",
                   quantity: 1
                 }
               ]
