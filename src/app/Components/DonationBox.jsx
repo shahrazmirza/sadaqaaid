@@ -57,12 +57,12 @@ export default function DonationBox() {
           isInvalid={""}
           errorMessage={"" ? "Please select or enter a custom amount" : ""}
         >
-          <Radio name="fifty" value="50">$50</Radio>
-          <Radio name="hundred" value="100">$100</Radio>
-          <Radio name="twofifty" value="250">$250</Radio>
-          <Radio name="fivehundred" value="500">$500</Radio>
-          <Radio name="thousand" value="1000">$1,000</Radio>
-          <Radio name="custom" value="custom"></Radio>
+          <Radio name="amount" value="50">$50</Radio>
+          <Radio name="amount" value="100">$100</Radio>
+          <Radio name="amount" value="250">$250</Radio>
+          <Radio name="amount" value="500">$500</Radio>
+          <Radio name="amount" value="1000">$1,000</Radio>
+          <Radio name="amount" value="custom"></Radio>
           <div className="w-32">
             <Input
               name="customAmount"
