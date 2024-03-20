@@ -26,6 +26,7 @@ export default function DonationBox() {
           defaultValue=""
           isInvalid={true}
           errorMessage="Please select a donation type"
+          onClear={() => console.log("input cleared")}
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
           <Radio value="zakat" size="lg">Zakat</Radio>
