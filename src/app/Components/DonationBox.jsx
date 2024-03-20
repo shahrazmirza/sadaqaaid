@@ -7,9 +7,6 @@ export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
 
-  const [selectedValue, setSelectedValue] = useState("");  // Initial empty string
-
-    
   return (
     <Container>
       <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-5 z-20">
@@ -18,9 +15,9 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Donation Type"
           orientation="horizontal"
-          defaultValue=""
-          isInvalid={!selectedValue}
-          errorMessage="Please select a donation type"
+          defaultValue="sadaqa"
+          isInvalid={""}
+          errorMessage={"" ? "Please select a donation type" : ""}
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
           <Radio value="zakat" size="lg">Zakat</Radio>
