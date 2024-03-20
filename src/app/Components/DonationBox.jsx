@@ -22,15 +22,15 @@ export default function DonationBox() {
           <Button className='text-lg font-bold p-2 border-gray-400' type="radio">ZAKAT</Button>
         </div>
         <p className="text-xl px-2">Select Amount</p>
-        <div className="flex flex-col md:flex-row rounded-lg m-2 ">
+        <div className="flex flex-col md:flex-row rounded-lg border bg-yellow-300 m-2 ">
           <div className="grid grid-cols-5 border-b border-gray-400 md:border-b-0">
-            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800 px-4' type="radio">$50</Button>
-            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$100</Button>
-            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$250</Button>
-            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$500</Button>
-            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 bg-yellow-300 text-gray-800' type="radio">$1000</Button>
+            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 text-gray-800 px-4' type="radio">$50</Button>
+            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 text-gray-800' type="radio">$100</Button>
+            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 text-gray-800' type="radio">$250</Button>
+            <Button className='flex justify-center text-lg font-bold py-2 border-r border-gray-400 text-gray-800' type="radio">$500</Button>
+            <Button className='flex justify-center text-lg font-bold py-2 border-r-0 md:border-r border-gray-400 text-gray-800' type="radio">$1000</Button>
           </div>
-          <div className="flex justify-center items-center bg-white text-gray-800">
+          <div className="flex justify-center items-center border-b rounded md:border-b-0 bg-white text-gray-800">
             <p className="px-2">$</p>
             <input
               className='text-md font-bold border-none focus:outline-none py-2 pl-2'
