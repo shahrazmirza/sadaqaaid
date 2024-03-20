@@ -62,9 +62,9 @@ export default function DonationBox() {
             </div>
         </RadioGroup>
 
-        <button 
+        <Button 
           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
-          onClick={handleCheckout}>Donate</button>
+          onClick={handleCheckout}>Donate</Button>
       </div>
     </Container>
   );
