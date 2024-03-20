@@ -14,6 +14,12 @@ export default function DonationBox() {
   };
 
   const sizes = ["sm", "md", "lg"];
+
+  const [donationType, setDonationType] = useState('');
+
+  const handleDonationTypeChange = (value) => {
+    setDonationType(value);
+  };
     
   return (
     <Container>
@@ -23,7 +29,9 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Donation Type"
           orientation="horizontal"
-          defaultValue=""
+          value={donationType} // Set the value to the selected donation type
+          onChange={handleDonationTypeChange} // Handle the change of the selected donation type
+          isInvalid={donationType === ''} // Set isInvalid to true when no option is selected
           errorMessage="Please select a donation type"
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
