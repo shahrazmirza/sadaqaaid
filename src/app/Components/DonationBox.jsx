@@ -8,21 +8,12 @@ export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
 
+  const [selectedAmount, setSelectedAmount] = useState("custom");
+  const [customAmount, setCustomAmount] = useState("");
+
   const handleCheckout = async () => {
-    let price = "";
-  
-    // Get the selected value from the RadioGroup
-    const selectedValue = document.querySelector('input[name="amount"]:checked').value;
-  
-    // If the selected value is "custom", get the value from the input field
-    if (selectedValue === "custom") {
-      const customAmount = document.querySelector('input[name="customAmount"]').value;
-      price = customAmount;
-    } else {
-      price = selectedValue;
-    }
-  
-    // Call the checkout function with the determined price
+    let price = selectedAmount === "custom" ? customAmount : selectedAmount;
+
     await checkout({
       lineItems: [
         {
@@ -31,8 +22,7 @@ export default function DonationBox() {
         }
       ]
     });
-  };
-  
+  };  
 
   return (
     <Container>
@@ -55,14 +45,14 @@ export default function DonationBox() {
           orientation="horizontal"
           defaultValue="custom"
           isInvalid={""}
-          errorMessage={"" ? "Please select or enter a custom amount" : ""}
+          errorMessage={selectedAmount === "custom" && !customAmount ? "Please enter a custom amount" : ""}
         >
-          <Radio name="amount" value="50">$50</Radio>
-          <Radio name="amount" value="100">$100</Radio>
-          <Radio name="amount" value="250">$250</Radio>
-          <Radio name="amount" value="500">$500</Radio>
-          <Radio name="amount" value="1000">$1,000</Radio>
-          <Radio name="amount" value="custom"></Radio>
+          <Radio name="amount" value="50" checked={selectedAmount === "50"} onChange={() => setSelectedAmount("50")}>$50</Radio>
+          <Radio name="amount" value="100" checked={selectedAmount === "100"} onChange={() => setSelectedAmount("100")}>$100</Radio>
+          <Radio name="amount" value="250" checked={selectedAmount === "250"} onChange={() => setSelectedAmount("250")}>$250</Radio>
+          <Radio name="amount" value="500" checked={selectedAmount === "500"} onChange={() => setSelectedAmount("500")}>$500</Radio>
+          <Radio name="amount" value="1000" checked={selectedAmount === "1000"} onChange={() => setSelectedAmount("1000")}>$1,000</Radio>
+          <Radio name="amount" value="custom" checked={selectedAmount === "custom"} onChange={() => setSelectedAmount("custom")}></Radio>
           <div className="w-32">
             <Input
               name="customAmount"
@@ -71,8 +61,9 @@ export default function DonationBox() {
               label="Custom Amount"
               variant=""
               placeholder="$"
-              defaultValue=""
-              onClear={() => console.log("input cleared")}
+              value={customAmount}
+              onChange={(e) => setCustomAmount(e.target.value)}
+              onClear={() => setCustomAmount("")}
               className="max-w-xs"
             />
           </div>
