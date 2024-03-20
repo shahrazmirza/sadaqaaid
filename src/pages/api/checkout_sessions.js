@@ -13,7 +13,7 @@ export default async function handler(req, res) {
         price_data: {
           currency: 'aud',
           product_data: {
-            name: `${donationType} - $${amount.toLocaleString()}`,
+            name: `${donationType}`,
           },
           unit_amount: amount * 100,
         },
