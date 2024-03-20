@@ -23,6 +23,7 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Donation Type"
           orientation="horizontal"
+          errorMessage="Please select a donation type"
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
           <Radio value="zakat" size="lg">Zakat</Radio>
@@ -36,6 +37,7 @@ export default function DonationBox() {
         <RadioGroup
           label="Select Amount"
           orientation="horizontal"
+          errorMessage="Please select or enter a custom amount"
         >
           <Radio value="50" >$50</Radio>
           <Radio value="100">$100</Radio>
