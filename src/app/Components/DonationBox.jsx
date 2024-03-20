@@ -76,7 +76,7 @@ export default function DonationBox() {
             />
           </div>
         </div > */}
-        <Button 
+        <button 
           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
           onClick={(() => {
             checkout({
@@ -87,7 +87,7 @@ export default function DonationBox() {
                 }
               ]
             })
-          })}>Donate</Button>
+          })}>Donate</button>
       </div>
     </Container>
   );
