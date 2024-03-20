@@ -2,38 +2,11 @@
 import { Container } from "@radix-ui/themes";
 import React, { useState } from "react";
 import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
+import checkout from '../../pages/api/checkout_sessions'
 
 export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
-
-  const handleCheckout = async () => {
-    if (!selectedMethod) {
-      return toast.error("Please select a method");
-    } else if (
-      selectedMethod.toLowerCase() === "delivery" &&
-      !selectedSuburb
-    ) {
-      return toast.error("Please choose your delivery suburb");
-    } else if (
-      selectedMethod.toLowerCase() === "delivery" &&
-      selectedSuburb &&
-      !deliveryAddress
-    ) {
-      return toast.error("Please enter your delivery address");
-    } else {
-      try {
-        const response = await axios.post(
-          'api/checkout_sessions',
-          { cartItem: cart.cartItems }
-        );
-        console.log(response);
-        window.location = response.data.sessionURL;
-      } catch (error) {
-        console.error("Error creating checkout session:", error);
-      }
-    }
-  };
 
   return (
     <Container>
@@ -103,7 +76,18 @@ export default function DonationBox() {
             />
           </div>
         </div > */}
-        <Button onClick={handleCheckout} className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl">Donate</Button>
+        <Button 
+          className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
+          onClick={(() => {
+            checkout({
+              lineItems: [
+                {
+                  price: "50",
+                  quantity: 1
+                }
+              ]
+            })
+          })}>Donate</Button>
       </div>
     </Container>
   );
