@@ -2,11 +2,22 @@
 import { Container } from "@radix-ui/themes";
 import React, { useState } from "react";
 import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
-import checkout from '../../pages/api/checkout_sessions'
+import { checkout } from '../../pages/api/checkout_sessions'
 
 export default function DonationBox() {
   
   const sizes = ["sm", "md", "lg"];
+
+  const handleCheckout = async () => {
+    await checkout({
+      lineItems: [
+        {
+          price: "price_1OwH9LHPIvs440h63Rs6yYoc",
+          quantity: 1
+        }
+      ]
+    });
+  };
 
   return (
     <Container>
@@ -78,16 +89,7 @@ export default function DonationBox() {
         </div > */}
         <button 
           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
-          onClick={(() => {
-            checkout({
-              lineItems: [
-                {
-                  price: "prod_Plom4Gt1itXa3R",
-                  quantity: 1
-                }
-              ]
-            })
-          })}>Donate</button>
+          onClick={handleCheckout}>Donate</button>
       </div>
     </Container>
   );
