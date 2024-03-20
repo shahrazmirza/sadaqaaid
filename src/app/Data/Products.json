@@ -1,0 +1,42 @@
+[
+  {
+    "type": "sadaqa",
+    "value": 50
+  },
+  {
+    "type": "sadaqa",
+    "value": 100
+  },
+  {
+    "type": "sadaqa",
+    "value": 250
+  },
+  {
+    "type": "sadaqa",
+    "value": 500
+  },
+  {
+    "type": "sadaqa",
+    "value": 1000
+  },
+  {
+    "type": "zakat",
+    "value": 50
+  },
+  {
+    "type": "zakat",
+    "value": 100
+  },
+  {
+    "type": "zakat",
+    "value": 250
+  },
+  {
+    "type": "zakat",
+    "value": 500
+  },
+  {
+    "type": "zakat",
+    "value": 1000
+  }
+]
