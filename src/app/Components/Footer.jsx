@@ -60,8 +60,8 @@ const Footer = () => {
             }}
             initial = 'initial'
             animate={fadeControls}
-            className='text-l/snug font-normal leading-10'
-            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem modi, quaerat laborum id fugit blanditiis ratione delectus assumenda.</motion.p>
+            className='text-l/snug font-normal leading-6'
+            >Sadaqa Aid is a charity that works to provide assistance and development programs globally, with a focus on emergency relief, healthcare, education, clean water, and sustainable livelihoods. We operate in areas affected by conflict, disasters, and poverty, aiming to empower communities and alleviate suffering through our initiatives.</motion.p>
             <motion.div
             ref={ref} 
             variants={{ 
@@ -84,18 +84,10 @@ const Footer = () => {
             animate={fadeControls}
             className='flex pt-5'
             >
-              <div className='pr-1'>
-                <div class="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaFacebookF  /></div>
-              </div>
-              <div className='pr-1'>
-                <div class="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaTwitter  /></div>
-              </div>
-              <div className='pr-1'>
-                <div class="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaLinkedinIn  /></div>
-              </div>
-              <div>
-                <div class="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaRegEnvelope  /></div>
-              </div>
+              <Link href="/" className='pr-1 text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaFacebookF  /></div></Link>
+              <Link href="/" className='pr-1 text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaTwitter  /></div></Link>
+              <Link href="/" className='pr-1 text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaLinkedinIn  /></div></Link>
+              <Link href="/Contact" className='text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaRegEnvelope  /></div></Link>
             </motion.div>
             
           </div>
