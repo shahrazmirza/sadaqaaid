@@ -30,9 +30,9 @@ export default function DonationBox() {
       }
 
       if (amount === 0) {
-        throw new Error("Please select or enter a donation amount");
+        return toast.error("Please select or enter a donation amount");
       }
-
+      
       // Convert to appropriate format
       const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : 'Zakat';
 
