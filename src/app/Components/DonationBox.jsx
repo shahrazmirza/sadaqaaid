@@ -2,7 +2,8 @@
 import { Container } from "@radix-ui/themes";
 import React, { useState, useEffect } from "react";
 import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import data from '../Data/Products.json';
 
@@ -22,28 +23,29 @@ export default function DonationBox() {
   const handleCheckout = async () => {
     try {
       let selectedAmount = 0;
-
+  
       const radioButtons = document.querySelectorAll('input[type="radio"]');
       radioButtons.forEach((radio) => {
         if (radio.checked) {
           selectedAmount = parseFloat(radio.value);
         }
       });
-
+  
       if (selectedAmount === 0) {
-        const customAmountInput = document.querySelector('input[name="customAmount"]');
+        const customAmountInput = document.querySelector('input[type="text"][label="$ Custom Amount"]');
         if (customAmountInput && customAmountInput.value) {
           selectedAmount = parseFloat(customAmountInput.value);
         }
       }
-
+  
       if (selectedAmount === 0) {
-        return toast.error("Please select or enter a donation amount");
+        toast.error("Please select or enter a donation amount");
+        return; // Prevent further execution
       }
-
+  
       // Convert to appropriate format
       const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : 'Zakat';
-
+  
       const response = await axios.post('/api/checkout_sessions', {
         amount: selectedAmount,
         donationType: formattedDonationType,
@@ -55,6 +57,9 @@ export default function DonationBox() {
       // Handle error appropriately, such as displaying a toast notification
     }
   };
+  
+  
+  
 
   return (
     <Container>
@@ -75,9 +80,7 @@ export default function DonationBox() {
           <RadioGroup
             label="Select Amount"
             orientation="horizontal"
-            defaultValue="custom"
-            isInvalid={""}
-            errorMessage={"" ? "Please select or enter a custom amount" : ""}
+            defaultValue=""
           >
             <ul className='flex gap-2 pt-5'>
               {items.filter(item => item.type === donationType).map((item, index) => (
@@ -96,7 +99,6 @@ export default function DonationBox() {
                 label="$ Custom Amount"
                 variant="bordered"
                 placeholder=""
-                defaultValue=""
                 onClear={() => console.log("input cleared")}
                 className="max-w-xs"
               />
@@ -114,6 +116,7 @@ export default function DonationBox() {
     </Container>
   );
 }
+
 
 
 // 'use client'
