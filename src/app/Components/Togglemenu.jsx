@@ -19,7 +19,7 @@ function Togglemenu() {
   return (
     <div>
       <div className='flex justify-between h-10 items-center py-7'>
-        <div className='pl-5'>
+        <div className='flex justify-center items-center p-5 gap-2'>
           <Link href="/">
             <Image
               src='/assets/logo.png'
@@ -29,36 +29,70 @@ function Togglemenu() {
               className=''
             />
           </Link>
-          <h1>SADAQA AID</h1>
+          <Link href="/">
+            <h1 className='bold'>SADAQA AID</h1>
+          </Link>
         </div>
-        <button className='flex text-sky-700 bg-sky-50 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
+        <button className='flex text-gray-700 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
         {showDiv ? <Cross1Icon /> : <HamburgerMenuIcon />}
         </button>
       </div>
         {showDiv && 
-        <div className='bg-sky-50 px-4 py-2 mt-5 h-screen'>
+        <div className='bg-gray-100 px-4 py-2 h-screen'>
         <div className=''>
           <NavigationMenu.Root>
             <NavigationMenu.List className=" list-none">
               
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-sky-700" 
-                  href="/Pricing">
-                  Pricing
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/">
+                  Home
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-sky-700" 
-                  href="/FAQs">
-                  FAQs
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/Ramadan">
+                  Ramadan
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
 
               <NavigationMenu.Item>
-                <Link href="/Contact" className="px-5 m-5 w-fit text-sm font-medium leading-none border-sky-700 border-solid border rounded-full text-sky-700 hover:text-white h-10 hover:bg-sky-700 text-white-100 flex items-center justify-center">Get In Touch</Link>
+                <NavigationMenu.Link
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/Appeals">
+                  Appeals
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Link
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/Projects">
+                  Projects
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Link
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/Sadaqa">
+                  Sadaqa
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Link
+                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  href="/Zakat">
+                  Zakat
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <Link href="/Contact" className="px-5 m-5 w-fit text-sm font-medium leading-none border-gray-700 border-solid border rounded-full text-gray-700 hover:text-white h-10 hover:bg-gray-700 text-white-100 flex items-center justify-center">Get In Touch</Link>
               </NavigationMenu.Item>
             </NavigationMenu.List>
           </NavigationMenu.Root>
