@@ -38,5 +38,25 @@
   {
     "type": "zakat",
     "value": 1000
+  },
+  {
+    "type": "zakatAlFitr",
+    "value": 50
+  },
+  {
+    "type": "zakatAlFitr",
+    "value": 100
+  },
+  {
+    "type": "zakatAlFitr",
+    "value": 250
+  },
+  {
+    "type": "zakatAlFitr",
+    "value": 500
+  },
+  {
+    "type": "zakatAlFitr",
+    "value": 1000
   }
 ]

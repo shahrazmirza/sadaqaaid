@@ -34,7 +34,7 @@ export default function DonationBox() {
       }
       
       // Convert to appropriate format
-      const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : 'Zakat';
+      const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : donationType === 'zakat' ? 'Zakat' : 'Zakat-al-Fitr';
 
       const response = await axios.post('/api/checkout_sessions', {
         amount: amount,
@@ -61,9 +61,10 @@ export default function DonationBox() {
         >
           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
           <Radio value="zakat" size="lg">Zakat</Radio>
+          <Radio value="zakatAlFitr" size="lg">Zakat-al-Fitr</Radio>
         </RadioGroup>
 
-        {(donationType === "sadaqa" || donationType === "zakat") && (
+        {(donationType === "sadaqa" || donationType === "zakat" || donationType === "zakatAlFitr") && (
           <RadioGroup
             label="Select Amount"
             orientation="horizontal"
