@@ -31,7 +31,7 @@ const Hero = () => {
       </image>
       <Container className='absolute top-0 right-0 left-0 bottom-0'>
         <div className='md:flex h-screen items-center md:gap-20 md:p-10'>
-          <h1 className='fontHeading text-2xl py-10 md:text-5xl text-white text-center md:text-start drop-shadow-2xl p-5 md:p-0'>Join our movement with Sadaqa Aid to end poverty and transform lives globally</h1>
+          <h1 className='fontHeading text-2xl py-10 md:text-5xl text-white text-center md:text-start drop-shadow-2xl p-5 md:p-0 animate__animated animate__zoomIn animate__delay-1s'>Join our movement with Sadaqa Aid to end poverty and transform lives globally</h1>
           <DonationBox />
         </div>
       </Container>
