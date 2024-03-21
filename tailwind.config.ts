@@ -16,8 +16,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        heading1: ['Herr Von Muellerhoff', 'cursive'],
-        heading2: ['Source Sans', 'sans-serif'],
+        fontHeading: ['Mansalva', 'sans-serif'],
       },
     },
   },
