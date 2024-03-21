@@ -10,7 +10,7 @@ const SuccessPage = () => {
                 Thank You! Your donation has been successfully processed.
             </p>
             <Link href="/">
-                <Button className="px-6 text-sm font-medium leading-none border-gray-700 border-solid border rounded text-white hover:text-gray-700 h-10 hover:bg-white bg-gray-700">
+                <Button className="px-6 text-sm font-medium leading-none border-gray-800 border-solid border rounded text-white hover:text-gray-800 h-10 hover:bg-white bg-gray-800">
                     Continue
                 </Button>
             </Link>

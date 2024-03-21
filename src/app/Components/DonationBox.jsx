@@ -68,11 +68,13 @@ export default function DonationBox() {
             label="Select Amount"
             orientation="horizontal"
             defaultValue="custom"
+            className="flex flex-col"
           >
             <ul className='flex gap-2 pt-5'>
               {items.filter(item => item.type === donationType).map((item, index) => (
                 <li key={index}>
                   <Radio 
+                    className="pr-1 md:pr-2"
                     value={item.value}
                     onChange={() => setSelectedAmount(parseFloat(item.value))}
                   >
@@ -81,7 +83,7 @@ export default function DonationBox() {
                 </li>
               ))}
             </ul>
-
+            
             <p className="pt-5 px-3">OR</p>
 
             <div className="w-36">
