@@ -8,7 +8,7 @@ import { Container } from '@radix-ui/themes';
 const Hero = () => {
   return (
     <div>
-      <div className='h-screen relative z-0'>
+      <div className='h-screen relative overflow-hidden'>
         <div className='absolute inset-0 overflow-hidden'>
           <Image
             src='/assets/hero1.jpg'
