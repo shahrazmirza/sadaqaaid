@@ -74,7 +74,8 @@ const Footer = () => {
               <Link className='text-l/snug font-normal text-gray-500 leading-10'
               href="/Contact">Learn more</Link>
             </motion.div>
-            <motion.div 
+            
+            {/* <motion.div 
             ref={ref} 
             variants={{ 
               initial: { y: 50, opacity:0 },
@@ -88,7 +89,7 @@ const Footer = () => {
               <Link href="/" className='pr-1 text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaTwitter  /></div></Link>
               <Link href="/" className='pr-1 text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaLinkedinIn  /></div></Link>
               <Link href="/Contact" className='text-l/snug font-normal text-gray-700 leading-10'><div className="font-bold text-white rounded-full bg-gray-700 flex items-center justify-center font-mono h-7 w-7 px-2"><FaRegEnvelope  /></div></Link>
-            </motion.div>
+            </motion.div> */}
             
           </div>
           
