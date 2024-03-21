@@ -14,7 +14,7 @@ const Hero = () => {
           alt='Hero Image'
           layout='fill'
           objectFit='cover'
-          className='pb-20'
+          className=''
         />
       </div>
       <div className='absolute inset-0 overflow-hidden'>
@@ -23,7 +23,7 @@ const Hero = () => {
           alt='Hero Image'
           layout='fill'
           objectFit='cover'
-          className='pb-20 opacity-25'
+          className='opacity-25'
         />
       </div>
       <div className='absolute right-0 md:right-20 top-0 h-full flex items-center'>
