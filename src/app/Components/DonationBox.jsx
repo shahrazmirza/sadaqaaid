@@ -103,7 +103,7 @@ export default function DonationBox() {
         )}
         
         <Button 
-          className="my-2 rounded-lg bg-green-700 text-white py-2 text-xl"
+          className="my-2 rounded-lg bg-green-700 text-white py-8 text-xl"
           onClick={handleCheckout}
         >
           Donate
