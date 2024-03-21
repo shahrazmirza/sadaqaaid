@@ -68,7 +68,6 @@ export default function DonationBox() {
             label="Select Amount"
             orientation="horizontal"
             defaultValue="custom"
-            className="flex flex-col"
           >
             <ul className='flex gap-2 pt-5'>
               {items.filter(item => item.type === donationType).map((item, index) => (
@@ -112,94 +111,3 @@ export default function DonationBox() {
     </Container>
   );
 }
-
-
-
-
-// 'use client'
-// import { Container } from "@radix-ui/themes";
-// import React, { useEffect, useState } from "react";
-// import { Button, RadioGroup, Radio, Input } from "@nextui-org/react";
-// import { checkout } from '../../pages/api/checkout_sessions'
-// import data from '../Data/Products.json';
-
-// export default function DonationBox() {
-  
-//   const sizes = ["sm", "md", "lg"];
-
-//   const handleCheckout = async () => {
-//     await checkout({
-//       lineItems: [
-//         {
-//           price: "price_1OwH9LHPIvs440h63Rs6yYoc",
-//           quantity: 1
-//         }
-//       ]
-//     });
-//   };
-
-//   const [items, setItems] = useState([]);
-  
-//   useEffect(() => {
-//     console.log('', data);
-//     if (data && data.length > 0) {
-//       setItems(data);
-//     } else {
-//       console.error('');
-//     }
-//   }, []);
-
-//   return (
-//     <Container>
-//       <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-5 z-20">
-//         <h1 className="flex justify-center text-3xl">Donate Now</h1>
-        
-//         <RadioGroup
-//           label="Select Donation Type"
-//           orientation="horizontal"
-//           defaultValue="sadaqa"
-//           isInvalid={""}
-//           errorMessage={"" ? "Please select a donation type" : ""}
-//         >
-//           <Radio value="sadaqa" size="lg">Sadaqa</Radio>
-//           <Radio value="zakat" size="lg">Zakat</Radio>
-//         </RadioGroup>
-        
-//         <RadioGroup
-//           label="Select Amount"
-//           orientation="horizontal"
-//           defaultValue="custom"
-//           isInvalid={""}
-//           errorMessage={"" ? "Please select or enter a custom amount" : ""}
-//         >
-//           <ul className='flex gap-2 pt-5'>
-//             {items.filter(item => item.type === 'sadaqa').map((item, index) => (
-//               <li key={index}>
-//                 <Radio value={item.value}>${item.value}</Radio>
-//               </li>
-//             ))}
-//           </ul>
-
-//           <p className="pt-5 px-3">OR</p>
-
-//           <div className="w-32">
-//             <Input
-//               isClearable
-//               type="text"
-//               label="Custom Amount"
-//               variant=""
-//               placeholder="$"
-//               defaultValue=""
-//               onClear={() => console.log("input cleared")}
-//               className="max-w-xs"
-//             />
-//           </div>
-//         </RadioGroup>
-        
-//         <Button 
-//           className="my-2 rounded-lg  bg-green-700 text-white py-2 text-xl"
-//           onClick={handleCheckout}>Donate</Button>
-//       </div>
-//     </Container>
-//   );
-// }
