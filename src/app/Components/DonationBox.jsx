@@ -9,6 +9,8 @@ import data from '../Data/Products.json';
 export default function DonationBox() {
   const [donationType, setDonationType] = useState("sadaqa");
   const [items, setItems] = useState([]);
+  const [selectedAmount, setSelectedAmount] = useState(0);
+  const [customAmountInputValue, setCustomAmountInputValue] = useState("");
 
   useEffect(() => {
     // Fetch or set the items data
@@ -21,38 +23,28 @@ export default function DonationBox() {
 
   const handleCheckout = async () => {
     try {
-      let selectedAmount = 0;
+      let amount = selectedAmount;
 
-      const radioButtons = document.querySelectorAll('input[type="radio"]');
-      radioButtons.forEach((radio) => {
-        if (radio.checked) {
-          selectedAmount = parseFloat(radio.value);
-        }
-      });
-
-      if (selectedAmount === 0) {
-        const customAmountInput = document.querySelector('input[name="customAmount"]');
-        if (customAmountInput && customAmountInput.value) {
-          selectedAmount = parseFloat(customAmountInput.value);
-        }
+      if (amount === 0 && customAmountInputValue.trim() !== "") {
+        amount = parseFloat(customAmountInputValue.trim());
       }
 
-      if (selectedAmount === 0) {
-        return toast.error("Please select or enter a donation amount");
+      if (amount === 0) {
+        throw new Error("Please select or enter a donation amount");
       }
 
       // Convert to appropriate format
       const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : 'Zakat';
 
       const response = await axios.post('/api/checkout_sessions', {
-        amount: selectedAmount,
+        amount: amount,
         donationType: formattedDonationType,
       });
       console.log(response);
       window.location = response.data.sessionURL;
     } catch (error) {
       console.error("Error creating checkout session:", error);
-      // Handle error appropriately, such as displaying a toast notification
+      toast.error(error.message);
     }
   };
 
@@ -76,13 +68,16 @@ export default function DonationBox() {
             label="Select Amount"
             orientation="horizontal"
             defaultValue="custom"
-            isInvalid={""}
-            errorMessage={"" ? "Please select or enter a custom amount" : ""}
           >
             <ul className='flex gap-2 pt-5'>
               {items.filter(item => item.type === donationType).map((item, index) => (
                 <li key={index}>
-                  <Radio value={item.value}>${item.value}</Radio>
+                  <Radio 
+                    value={item.value}
+                    onChange={() => setSelectedAmount(parseFloat(item.value))}
+                  >
+                    ${item.value}
+                  </Radio>
                 </li>
               ))}
             </ul>
@@ -99,6 +94,7 @@ export default function DonationBox() {
                 defaultValue=""
                 onClear={() => console.log("input cleared")}
                 className="max-w-xs"
+                onChange={(e) => setCustomAmountInputValue(e.target.value)}
               />
             </div>
           </RadioGroup>
@@ -114,6 +110,8 @@ export default function DonationBox() {
     </Container>
   );
 }
+
+
 
 
 // 'use client'
