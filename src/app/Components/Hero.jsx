@@ -26,17 +26,8 @@ const Hero = () => {
           className='opacity-25'
         />
       </div>
-      <div className='absolute right-0 md:right-00 top-0 h-full flex md:justify-center w-screen items-center'>
+      <div className='absolute right-0 left-0 top-0 bottom-0'>
         <DonationBox />
-      </div>
-      <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-end h-screen pb-20"> {/* Adjust margin top as needed */}
-        <div className="flex space-x-2"> 
-          <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
-          <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
-          <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
-          <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
-          <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
-        </div>
       </div>
     </div>
   );
