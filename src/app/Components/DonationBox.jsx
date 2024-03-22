@@ -50,7 +50,7 @@ export default function DonationBox() {
 
   return (
     <Container>
-      <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-4 md:p-5 z-20">
+      <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-4 md:p-5 z-20 animate__animated animate__fadeIn animate__delay-2s">
         <h1 className="flex justify-center text-3xl">Donate Now</h1>
         
         <RadioGroup
