@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/herr-von-muellerhoff": "^5.0.19",
     "@fontsource/mansalva": "^5.0.19",
     "@fontsource/roboto": "^5.0.12",
     "@nextui-org/react": "^2.2.10",
