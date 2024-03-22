@@ -1,41 +1,41 @@
 [
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/supportgaza.jpg",
     "category": "Livelihood",
     "name": "Support Gaza",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
     "name": "Ramadan Meals",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/feedthefasting.jpg",
     "category": "Livelihood",
     "name": "Feed the Fasting",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/aidforyemen.jpg",
     "category": "Livelihood",
     "name": "Aid for Yemen",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/consistentdonations.jpg",
     "category": "Livelihood",
     "name": "Consistent Donations",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/sadaqazakat.jpg",
     "category": "Livelihood",
     "name": "Sadaqa & Zakat",
     "href": "/",
