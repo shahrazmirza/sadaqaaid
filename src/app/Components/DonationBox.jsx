@@ -50,8 +50,8 @@ export default function DonationBox() {
 
   return (
     <Container>
-      <div className="md:flex justify-center items-center flex-col h-screen">
-        <div className='md:flex items-center md:gap-20 md:p-10'>
+      <div className="flex justify-center flex-col h-screen">
+        <div className='md:flex items-center justify-center md:gap-20 md:p-10 pb-10'>
           <h1 className='font-heading1 text-2xl py-10 md:text-5xl text-white text-center md:text-start drop-shadow-2xl p-5 md:p-0 animate__animated animate__fadeIn animate__delay-1s'>Join our movement with Sadaqa Aid to end poverty and transform lives globally</h1>
           <div className="flex flex-col w-screen md:w-fit gap-5 text-black bg-white rounded-lg p-4 md:p-5 z-20 animate__animated animate__fadeIn animate__delay-2s">
             <h1 className="flex justify-center text-3xl">Donate Now</h1>
@@ -113,7 +113,7 @@ export default function DonationBox() {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center items-end h-screen pb-20">
+        <div className="flex justify-center items-end">
           <div className="flex space-x-2"> 
             <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
             <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
