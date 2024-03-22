@@ -1,0 +1,44 @@
+[
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Support Gaza",
+    "href": "/",
+    "paymentHref": "/"
+  },
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Ramadan Meals",
+    "href": "/",
+    "paymentHref": "/"
+  },
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Feed the Fasting",
+    "href": "/",
+    "paymentHref": "/"
+  },
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Aid for Yemen",
+    "href": "/",
+    "paymentHref": "/"
+  },
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Consistent Donations",
+    "href": "/",
+    "paymentHref": "/"
+  },
+  {
+    "image": "/assets/livelihood.jpg",
+    "category": "Livelihood",
+    "name": "Sadaqa & Zakat",
+    "href": "/",
+    "paymentHref": "/"
+  }
+]

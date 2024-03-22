@@ -34,7 +34,7 @@ const Hero = () => {
           <DonationBox />
         </div>
       </Container>
-      <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-end h-screen pb-10"> {/* Adjust margin top as needed */}
+      <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-end h-screen pb-20"> {/* Adjust margin top as needed */}
         <div className="flex space-x-2"> 
           <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div> {/* Adjust width, height, and background color */}
           <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
