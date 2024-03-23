@@ -42,61 +42,72 @@ const UrgentCauses = () => {
     }
   };
 
+  // Create a set of unique donation types
+  const uniqueDonationTypes = [...new Set(items.map(item => item.type))];
+
   return (
     <Container>
       <h1 className="font-heading1 md:text-5xl text-3xl text-center leading-loose pt-10 md:pt-20 md:pb-10">Urgent Causes</h1>
       <ul className="md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7">
-        {items.map((item) => (
-          <li key={item.id}>
-            <Image src={item.image} alt={item.type} width={500} height={500} />
-            <div className="flex flex-col border-solid border shadow-md">
-              <div className="flex flex-col justify-start px-4 pt-4">
-                <Chip radius="sm" color="danger">
-                  {item.category}
-                </Chip>
-                <h className="md:text-xl font-medium text-lg pt-4">{item.type}</h>
-              </div>
-              <RadioGroup label="Select Amount" orientation="horizontal" defaultValue="custom" className="p-4">
-                <div className="flex flex-col justify-center items-center">
-                  <ul className="flex gap-2">
-                    {items
-                      .filter((filteredItem) => filteredItem.type === item.type)
-                      .map((filteredItem, index) => (
-                        <li key={index}>
-                          <Radio
-                            className="pr-1 md:pr-2"
-                            value={filteredItem.value}
-                            onChange={() => setSelectedAmount(parseFloat(filteredItem.value))}
-                          >
-                            ${filteredItem.value}
-                          </Radio>
-                        </li>
-                      ))}
-                  </ul>
-                  <p className="p-2">OR</p>
-                  <div className="w-36">
-                    <Input
-                      isClearable
-                      type="text"
-                      label="$ Custom Amount"
-                      variant="bordered"
-                      placeholder=""
-                      defaultValue=""
-                      onClear={() => console.log('input cleared')}
-                      className="max-w-xs"
-                      size="sm"
-                      onChange={(e) => setCustomAmountInputValue(e.target.value)}
-                    />
+        {uniqueDonationTypes.map((donationType, index) => (
+          <li key={index}>
+            {/* Find the first item with the current donation type */}
+            {items.find(item => item.type === donationType) && (
+              <div>
+                <Image 
+                  src={items.find(item => item.type === donationType).image} 
+                  alt={donationType} 
+                  width={500} 
+                  height={500} 
+                />
+                <div className="flex flex-col border-solid border shadow-md">
+                  <div className="flex flex-col justify-start px-4 pt-4">
+                    <Chip radius="sm" color="danger">
+                      {items.find(item => item.type === donationType).category}
+                    </Chip>
+                    <h className="md:text-xl font-medium text-lg pt-4">{donationType}</h>
                   </div>
+                  <RadioGroup label="Select Amount" orientation="horizontal" defaultValue="custom" className="p-4">
+                    <div className="flex flex-col justify-center items-center">
+                      <ul className="flex gap-2">
+                        {items.filter(item => item.type === donationType).map((item, index) => (
+                          <li key={index}>
+                            <Radio
+                              className="pr-1 md:pr-2"
+                              value={item.value}
+                              onChange={() => setSelectedAmount(parseFloat(item.value))}
+                            >
+                              ${item.value}
+                            </Radio>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="p-2">OR</p>
+                      <div className="w-36">
+                        <Input
+                          isClearable
+                          type="text"
+                          label="$ Custom Amount"
+                          variant="bordered"
+                          placeholder=""
+                          defaultValue=""
+                          onClear={() => console.log('input cleared')}
+                          className="max-w-xs"
+                          size="sm"
+                          onChange={(e) => setCustomAmountInputValue(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </RadioGroup>
+                  <button
+                    onClick={() => handleCheckout(donationType)} // Pass the donationType as a parameter
+                    className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center w-full"
+                  >
+                    Donate
+                  </button>
                 </div>
-              </RadioGroup>
-              <button
-                onClick={() => handleCheckout(item.type)} // Pass the donationType as a parameter
-                className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center w-full"
-              >
-                Donate
-              </button>
-            </div>
+              </div>
+            )}
           </li>
         ))}
       </ul>
