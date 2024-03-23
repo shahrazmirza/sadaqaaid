@@ -1,20 +1,20 @@
 [
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
     "name": "Palestine Gaza Appeal",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
     "name": "Yemen Appeal",
     "href": "/",
     "paymentHref": "/"
   },
   {
-    "image": "/assets/livelihood.jpg",
+    "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
     "name": "Syria Relief",
     "href": "/",
