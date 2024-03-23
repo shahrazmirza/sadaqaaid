@@ -7,6 +7,9 @@ import axios from "axios";
 import data from '../Data/Products.json';
 
 export default function DonationBox() {
+  
+  const size = ["xs", "sm", "md", "lg"];
+
   const [donationType, setDonationType] = useState("sadaqa");
   const [items, setItems] = useState([]);
   const [selectedAmount, setSelectedAmount] = useState(0);
@@ -69,11 +72,13 @@ export default function DonationBox() {
 
             {(donationType === "sadaqa" || donationType === "zakat" || donationType === "zakatAlFitr") && (
               <RadioGroup
-                label="Select Amount"
-                orientation="horizontal"
-                defaultValue="custom"
-              >
-                <ul className='flex gap-2 pt-5'>
+              label="Select Amount"
+              orientation="horizontal"
+              defaultValue="custom"
+              className='md:p-4 p-1'
+            >
+              <div className='flex flex-col justify-center items-center'>
+                <ul className='flex gap-2'>
                   {items.filter(item => item.type === donationType).map((item, index) => (
                     <li key={index}>
                       <Radio 
@@ -86,8 +91,7 @@ export default function DonationBox() {
                     </li>
                   ))}
                 </ul>
-                
-                <p className="pt-5 px-3">OR</p>
+                <p className="p-2">OR</p>
 
                 <div className="w-36">
                   <Input
@@ -99,10 +103,12 @@ export default function DonationBox() {
                     defaultValue=""
                     onClear={() => console.log("input cleared")}
                     className="max-w-xs"
+                    size='sm'
                     onChange={(e) => setCustomAmountInputValue(e.target.value)}
                   />
                 </div>
-              </RadioGroup>
+              </div>
+            </RadioGroup>
             )}
             
             <Button 

@@ -1,51 +1,107 @@
 'use client'
-import Image from 'next/image'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import {Chip} from "@nextui-org/react";
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Chip } from '@nextui-org/react';
 import { Container } from '@radix-ui/themes';
+import { RadioGroup, Radio, Input } from '@nextui-org/react';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 import data from '../Data/UrgentCauses.json';
 
 const UrgentCauses = () => {
-
   const [items, setItems] = useState([]);
+  const [selectedAmount, setSelectedAmount] = useState(0);
+  const [customAmountInputValue, setCustomAmountInputValue] = useState('');
 
   useEffect(() => {
-      console.log('', data);
-
-      if (data && data.length > 0) {
-          setItems(data);
-      } else {
-          console.error('');
-      }
+    // Fetch or set the items data
+    setItems(data);
   }, []);
+
+  const handleCheckout = async (donationType) => {
+    try {
+      let amount = selectedAmount;
+
+      if (amount === 0 && customAmountInputValue.trim() !== '') {
+        amount = parseFloat(customAmountInputValue.trim());
+      }
+
+      if (amount === 0) {
+        return toast.error('Please select or enter a donation amount');
+      }
+
+      const response = await axios.post('/api/checkout_sessions', {
+        amount: amount,
+        donationType: donationType,
+      });
+      console.log(response);
+      window.location = response.data.sessionURL;
+    } catch (error) {
+      console.error('Error creating checkout session:', error);
+      toast.error(error.message);
+    }
+  };
 
   return (
     <Container>
-      <h1 className='font-heading1 md:text-5xl text-3xl text-center leading-loose pt-10 md:pt-20 md:pb-10'>Urgent Causes</h1>
-      <ul className='md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7'>
-        {items.map(item => (
+      <h1 className="font-heading1 md:text-5xl text-3xl text-center leading-loose pt-10 md:pt-20 md:pb-10">Urgent Causes</h1>
+      <ul className="md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7">
+        {items.map((item) => (
           <li key={item.id}>
-            <div>
-              <Link href={item.href}>
-                {item.image && <img src={item.image} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />}
-              </Link>
-            </div>
-
-            <div className='flex flex-col border-solid border shadow-md'>
-              <div className="flex flex-col p-4">
-                <Chip radius="sm" color="danger">{item.category}</Chip>
-                <Link href={item.href} className='md:text-xl font-medium text-lg pt-4'>{item.name}</Link>
+            <Image src={item.image} alt={item.type} width={500} height={500} />
+            <div className="flex flex-col border-solid border shadow-md">
+              <div className="flex flex-col justify-start px-4 pt-4">
+                <Chip radius="sm" color="danger">
+                  {item.category}
+                </Chip>
+                <h className="md:text-xl font-medium text-lg pt-4">{item.type}</h>
               </div>
-              <div className=''>
-                <Link href={item.paymentHref} className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center">Donate</Link>
-              </div>
+              <RadioGroup label="Select Amount" orientation="horizontal" defaultValue="custom" className="p-4">
+                <div className="flex flex-col justify-center items-center">
+                  <ul className="flex gap-2">
+                    {items
+                      .filter((filteredItem) => filteredItem.type === item.type)
+                      .map((filteredItem, index) => (
+                        <li key={index}>
+                          <Radio
+                            className="pr-1 md:pr-2"
+                            value={filteredItem.value}
+                            onChange={() => setSelectedAmount(parseFloat(filteredItem.value))}
+                          >
+                            ${filteredItem.value}
+                          </Radio>
+                        </li>
+                      ))}
+                  </ul>
+                  <p className="p-2">OR</p>
+                  <div className="w-36">
+                    <Input
+                      isClearable
+                      type="text"
+                      label="$ Custom Amount"
+                      variant="bordered"
+                      placeholder=""
+                      defaultValue=""
+                      onClear={() => console.log('input cleared')}
+                      className="max-w-xs"
+                      size="sm"
+                      onChange={(e) => setCustomAmountInputValue(e.target.value)}
+                    />
+                  </div>
+                </div>
+              </RadioGroup>
+              <button
+                onClick={() => handleCheckout(item.type)} // Pass the donationType as a parameter
+                className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center w-full"
+              >
+                Donate
+              </button>
             </div>
           </li>
         ))}
       </ul>
     </Container>
-  )
-}
+  );
+};
 
-export default UrgentCauses
+export default UrgentCauses;

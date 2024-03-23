@@ -28,18 +28,19 @@ const UrgentAppeals = () => {
           <li key={item.id}>
             <div>
               <Link href={item.href}>
-                {item.image && <img src={item.image} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />}
+                {item.image && <img src={item.image} alt={item.type} style={{ maxWidth: '100%', height: 'auto' }} />}
               </Link>
             </div>
 
             <div className='flex flex-col border-solid border shadow-md'>
               <div className="flex flex-col p-4">
                 <Chip radius="sm" color="danger">{item.category}</Chip>
-                <Link href={item.href} className='md:text-xl font-medium text-lg pt-4'>{item.name}</Link>
+                <Link href={item.href} className='md:text-xl font-medium text-lg pt-4'>{item.type}</Link>
               </div>
-              <div className=''>
-                <Link href={item.paymentHref} className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center">Donate</Link>
-              </div>
+              <button 
+                onClick={handleCheckout}
+                className="px-5 py-5 text-lg font-medium leading-none border-green-700 border-solid border rounded-b text-white hover:text-green-700 h-10 hover:bg-white bg-green-700 flex items-center justify-center w-full"
+              >Donate</button>
             </div>
           </li>
         ))}

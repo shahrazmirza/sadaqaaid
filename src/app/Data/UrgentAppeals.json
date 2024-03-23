@@ -2,22 +2,22 @@
   {
     "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
-    "name": "Palestine Gaza Appeal",
+    "type": "Palestine Gaza Appeal",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
-    "name": "Yemen Appeal",
+    "type": "Yemen Appeal",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
-    "name": "Syria Relief",
+    "type": "Syria Relief",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   }
 ]

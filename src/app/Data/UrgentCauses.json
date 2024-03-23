@@ -2,43 +2,169 @@
   {
     "image": "/assets/supportgaza.jpg",
     "category": "Livelihood",
-    "name": "Support Gaza",
+    "type": "Support Gaza",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
-    "name": "Ramadan Meals",
+    "type": "Ramadan Meals",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/feedthefasting.jpg",
     "category": "Livelihood",
-    "name": "Feed the Fasting",
+    "type": "Feed the Fasting",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/aidforyemen.jpg",
     "category": "Livelihood",
-    "name": "Aid for Yemen",
+    "type": "Aid for Yemen",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/consistentdonations.jpg",
     "category": "Livelihood",
-    "name": "Consistent Donations",
+    "type": "Consistent Donations",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
   },
   {
     "image": "/assets/sadaqazakat.jpg",
     "category": "Livelihood",
-    "name": "Sadaqa & Zakat",
+    "type": "Sadaqa or Zakat",
     "href": "/",
-    "paymentHref": "/"
+    "value": 50
+  },
+  {
+    "image": "/assets/supportgaza.jpg",
+    "category": "Livelihood",
+    "type": "Support Gaza",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/ramadanmeals.jpg",
+    "category": "Livelihood",
+    "type": "Ramadan Meals",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/feedthefasting.jpg",
+    "category": "Livelihood",
+    "type": "Feed the Fasting",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/aidforyemen.jpg",
+    "category": "Livelihood",
+    "type": "Aid for Yemen",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/consistentdonations.jpg",
+    "category": "Livelihood",
+    "type": "Consistent Donations",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/sadaqazakat.jpg",
+    "category": "Livelihood",
+    "type": "Sadaqa or Zakat",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/supportgaza.jpg",
+    "category": "Livelihood",
+    "type": "Support Gaza",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/ramadanmeals.jpg",
+    "category": "Livelihood",
+    "type": "Ramadan Meals",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/feedthefasting.jpg",
+    "category": "Livelihood",
+    "type": "Feed the Fasting",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/aidforyemen.jpg",
+    "category": "Livelihood",
+    "type": "Aid for Yemen",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/consistentdonations.jpg",
+    "category": "Livelihood",
+    "type": "Consistent Donations",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/sadaqazakat.jpg",
+    "category": "Livelihood",
+    "type": "Sadaqa or Zakat",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/supportgaza.jpg",
+    "category": "Livelihood",
+    "type": "Support Gaza",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/ramadanmeals.jpg",
+    "category": "Livelihood",
+    "type": "Ramadan Meals",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/feedthefasting.jpg",
+    "category": "Livelihood",
+    "type": "Feed the Fasting",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/aidforyemen.jpg",
+    "category": "Livelihood",
+    "type": "Aid for Yemen",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/consistentdonations.jpg",
+    "category": "Livelihood",
+    "type": "Consistent Donations",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/sadaqazakat.jpg",
+    "category": "Livelihood",
+    "type": "Sadaqa or Zakat",
+    "href": "/",
+    "value": 500
   }
 ]

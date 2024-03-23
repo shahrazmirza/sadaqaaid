@@ -18,7 +18,7 @@ export default async function Home() {
       <Hero />
       <Causes />
       <UrgentCauses />
-      <UrgentAppeals />
+      {/* <UrgentAppeals /> */}
       <Homeless />
       <Footer />
     </div>
