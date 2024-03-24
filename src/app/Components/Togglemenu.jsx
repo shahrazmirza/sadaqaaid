@@ -34,19 +34,19 @@ function Togglemenu() {
             <h1 className='bold'>SADAQA AID</h1>
           </Link>
         </div>
-        <button className='flex text-gray-700 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
+        <button className='flex text-gray-800 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
         {showDiv ? <Cross1Icon /> : <HamburgerMenuIcon />}
         </button>
       </div>
         {showDiv && 
-        <div className='bg-gray-100 px-4 py-2 h-screen'>
+        <div className='bg-gray-100 px-5 py-2 h-screen'>
         <div className=''>
           <NavigationMenu.Root>
             <NavigationMenu.List className=" list-none">
               
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="font-heading1 flex text-xl px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
                   href="/">
                   Home
                 </NavigationMenu.Link>
@@ -54,11 +54,11 @@ function Togglemenu() {
 
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="font-heading1 flex text-xl px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
                   href="/Ramadan">
                   Ramadan
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 text-xs leading-8 pl-5'>
+                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
                   <Link href="/Ramadan"><Chip radius="sm">Ramadan Meals</Chip></Link>
                   <Link href="/Ramadan"><Chip radius="sm">Iftar</Chip></Link>
                   <Link href="/Ramadan"><Chip radius="sm">Kaffarah</Chip></Link>
@@ -70,11 +70,11 @@ function Togglemenu() {
 
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="font-heading1 flex text-xl px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
                   href="/Appeals">
                   Appeals
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 text-xs leading-8 pl-5'>
+                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
                   <Link href="/Appeals"><Chip radius="sm">Palestine Gaza Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Yemen Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Syria Relief</Chip></Link>
@@ -89,11 +89,11 @@ function Togglemenu() {
 
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="font-heading1 flex text-xl px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
+                  className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
                   href="/Projects">
                   Projects
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 text-xs leading-8 pl-5'>
+                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
                   <Link href="/Projects"><Chip radius="sm">Pakistan School</Chip></Link>
                   <Link href="/Projects"><Chip radius="sm">Pakistan Surgeries</Chip></Link>
                   <Link href="/Projects"><Chip radius="sm">Pakistan Water Stations</Chip></Link>
@@ -101,7 +101,7 @@ function Togglemenu() {
               </NavigationMenu.Item>
 
               <NavigationMenu.Item>
-                <Link href="/Contact" className="px-5 m-5 w-fit text-sm font-medium leading-none border-gray-700 border-solid border rounded-full text-gray-700 hover:text-white h-10 hover:bg-gray-700 text-white-100 flex items-center justify-center">Get In Touch</Link>
+                <Link href="/Contact" className="px-5 my-5 w-fit text-sm font-medium leading-none border-gray-800 bg-gray-800 border-solid border rounded-full text-white h-10 flex items-center justify-center">Get In Touch</Link>
               </NavigationMenu.Item>
             </NavigationMenu.List>
           </NavigationMenu.Root>
@@ -153,7 +153,7 @@ export default Togglemenu;
 //             <h1 className='bold'>SADAQA AID</h1>
 //           </Link>
 //         </div>
-//         <button className='flex text-gray-700 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
+//         <button className='flex text-gray-800 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
 //         {showDiv ? <Cross1Icon /> : <HamburgerMenuIcon />}
 //         </button>
 //       </div>
