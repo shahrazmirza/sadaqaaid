@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Home",
+    "classNameNavMenu": "px-6 text-yellow-400",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/"
+  },
+  {
+    "category": "Ramadan",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/Ramadan"
+  },
+  {
+    "category": "Causes",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/Causes"
+  },
+  {
+    "category": "Appeals",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/Appeals"
+  },
+  {
+    "category": "Projects",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/Projects"
+  },
+  {
+    "category": "Contact",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "px-5 m-5 w-fit text-sm font-medium leading-none border-gray-700 border-solid border rounded-full text-gray-700 hover:text-white h-10 hover:bg-gray-700 text-white-100 flex items-center justify-center",
+    "href": "/Contact"
+  }
+]

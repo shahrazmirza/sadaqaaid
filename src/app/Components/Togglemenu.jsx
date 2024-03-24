@@ -1,11 +1,11 @@
 'use client'
 import React from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import classNames from 'classnames';
 import { CaretDownIcon, Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import data from '../Data/NavbarItems.json';
 
 function Togglemenu() {
   const [items, setItems] = useState([]);
@@ -15,6 +15,10 @@ function Togglemenu() {
   const toggleDiv = () => {
     setShowDiv(!showDiv);
   };
+
+  useEffect(() => {
+    setItems(data);
+  }, []);
 
   return (
     <div>
@@ -39,64 +43,13 @@ function Togglemenu() {
       </div>
         {showDiv && 
         <div className='bg-gray-100 px-4 py-2 h-screen'>
-        <div className=''>
-          <NavigationMenu.Root>
-            <NavigationMenu.List className=" list-none">
-              
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/">
-                  Home
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/Ramadan">
-                  Ramadan
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/Appeals">
-                  Appeals
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/Projects">
-                  Projects
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/Sadaqa">
-                  Sadaqa
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <NavigationMenu.Link
-                  className="flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700" 
-                  href="/Zakat">
-                  Zakat
-                </NavigationMenu.Link>
-              </NavigationMenu.Item>
-
-              <NavigationMenu.Item>
-                <Link href="/Contact" className="px-5 m-5 w-fit text-sm font-medium leading-none border-gray-700 border-solid border rounded-full text-gray-700 hover:text-white h-10 hover:bg-gray-700 text-white-100 flex items-center justify-center">Get In Touch</Link>
-              </NavigationMenu.Item>
-            </NavigationMenu.List>
-          </NavigationMenu.Root>
-        </div>
+          <ul>
+            {items.map((items, index) => (
+              <Link key={index} className={items.classNameToggleMenu} href={items.href}>
+                {items.category}
+              </Link>
+            ))}
+          </ul>
       </div>
       }
     </div>

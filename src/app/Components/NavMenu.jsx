@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useContext } from 'react';
 import { Container, Section } from '@radix-ui/themes';
 import Image from 'next/image';
+import data from '../Data/NavbarItems.json';
 
 const NavMenu = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,6 +19,12 @@ const NavMenu = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
+
+  const [items, setItems] = useState([]);
+  
+  useEffect(() => {
+    setItems(data);
   }, []);
 
   return (
@@ -41,36 +48,15 @@ const NavMenu = () => {
               <h1 className='text-2xl font-basic tracking-wider'>SADAQA AID</h1>
             </Link>
           </div>
-          <div className='flex text-base'>
-            <Link href='/' className='px-6 text-yellow-400'>
-              Home
-            </Link>
-
-            <Link href='/Ramadan' className='px-6 text-white'>
-              Ramadan
-            </Link>
-
-            <Link href='/Appeals' className='px-6 text-white'>
-              Appeals
-            </Link>
-            
-            <Link href='/Projects' className='px-6 text-white'>
-              Projects
-            </Link>
-
-            <Link href='/Sadaqa' className='px-6 text-white'>
-              Sadaqa
-            </Link>
-
-            <Link href='/Zakat' className='px-6 text-white'>
-              Zakat
-            </Link>
-
-            <Link href='/Contact' className='px-6 text-white'>
-              Contact
-            </Link>
-
-          </div>
+          
+          <ul className='flex text-base'>
+            {items.map((items, index) => (
+              <Link key={index} href={items.href} className={items.classNameNavMenu}>
+                {items.category}
+              </Link>
+            ))}
+          </ul>
+          
         </div>
       </Container>
     </div>
