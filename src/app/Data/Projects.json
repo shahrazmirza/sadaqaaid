@@ -8,7 +8,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/pakistansurgeries.jpg",
     "category": "Health",
     "type": "Pakistan Surgeries",
     "color": "warning",
@@ -16,7 +16,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/pakistanwaterstations.jpg",
     "category": "Livelihood",
     "type": "Pakistan Water Stations",
     "color": "danger",

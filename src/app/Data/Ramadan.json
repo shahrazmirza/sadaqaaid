@@ -1,14 +1,14 @@
 [
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
-    "type": "Ramadan Food Packs",
+    "type": "Ramadan Meals",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/iftar.jpg",
     "category": "Livelihood",
     "type": "Iftar",
     "href": "/",
@@ -48,15 +48,15 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
-    "type": "Ramadan Food Packs",
+    "type": "Ramadan Meals",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/iftar.jpg",
     "category": "Livelihood",
     "type": "Iftar",
     "href": "/",
@@ -96,15 +96,15 @@
     "value": 100
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
-    "type": "Ramadan Food Packs",
+    "type": "Ramadan Meals",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/iftar.jpg",
     "category": "Livelihood",
     "type": "Iftar",
     "href": "/",
@@ -144,15 +144,15 @@
     "value": 250
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/ramadanmeals.jpg",
     "category": "Livelihood",
-    "type": "Ramadan Food Packs",
+    "type": "Ramadan Meals",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/iftar.jpg",
     "category": "Livelihood",
     "type": "Iftar",
     "href": "/",

@@ -1,6 +1,6 @@
 [
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
     "type": "Palestine Gaza Appeal",
     "href": "/",
@@ -8,7 +8,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
     "type": "Yemen Appeal",
     "href": "/",
@@ -16,7 +16,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
     "type": "Syria Relief",
     "href": "/",
@@ -24,7 +24,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/afghanistanemergency.jpg",
     "category": "Livelihood",
     "type": "Afghanistan Emergency",
     "href": "/",
@@ -32,7 +32,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/turkiyeemergency.jpg",
     "category": "Livelihood",
     "type": "Turkiye Emergency",
     "href": "/",
@@ -40,7 +40,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/rohingyaappeal.jpg",
     "category": "Livelihood",
     "type": "Rohingya Appeal",
     "href": "/",
@@ -48,7 +48,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/pakistanemergency.jpg",
     "category": "Livelihood",
     "type": "Pakistan Emergency",
     "href": "/",
@@ -56,7 +56,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/lebanonappeal.jpg",
     "category": "Livelihood",
     "type": "Lebanon Appeal",
     "href": "/",
@@ -64,7 +64,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/bangladeshrelief.jpg",
     "category": "Livelihood",
     "type": "Bangladesh Relief",
     "href": "/",
@@ -72,7 +72,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
     "type": "Palestine Gaza Appeal",
     "href": "/",
@@ -80,7 +80,7 @@
     "value": 100
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
     "type": "Yemen Appeal",
     "href": "/",
@@ -88,7 +88,7 @@
     "value": 100
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
     "type": "Syria Relief",
     "href": "/",
@@ -144,7 +144,7 @@
     "value": 100
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
     "type": "Palestine Gaza Appeal",
     "href": "/",
@@ -152,7 +152,7 @@
     "value": 250
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
     "type": "Yemen Appeal",
     "href": "/",
@@ -160,7 +160,7 @@
     "value": 250
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
     "type": "Syria Relief",
     "href": "/",
@@ -216,7 +216,7 @@
     "value": 250
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/palestinegazaappeal.jpg",
     "category": "Livelihood",
     "type": "Palestine Gaza Appeal",
     "href": "/",
@@ -224,7 +224,7 @@
     "value": 500
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/yemenappeal.jpg",
     "category": "Livelihood",
     "type": "Yemen Appeal",
     "href": "/",
@@ -232,7 +232,7 @@
     "value": 500
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/syriarelief.jpg",
     "category": "Livelihood",
     "type": "Syria Relief",
     "href": "/",

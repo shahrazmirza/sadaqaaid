@@ -16,9 +16,9 @@
     "value": 50
   },
   {
-    "image": "/assets/feedthefasting.jpg",
+    "image": "/assets/iftar.jpg",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 50
@@ -66,7 +66,7 @@
   {
     "image": "/assets/feedthefasting.jpg",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 100
@@ -114,7 +114,7 @@
   {
     "image": "/assets/feedthefasting.jpg",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 250
@@ -162,7 +162,7 @@
   {
     "image": "/assets/feedthefasting.jpg",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 500
