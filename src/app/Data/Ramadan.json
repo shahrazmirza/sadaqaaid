@@ -16,7 +16,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/kaffarah.jpg",
     "category": "Livelihood",
     "type": "Kaffarah",
     "href": "/",
@@ -24,7 +24,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/fidya.jpg",
     "category": "Livelihood",
     "type": "Fidya",
     "href": "/",
@@ -32,7 +32,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/eidgifts.jpg",
     "category": "Livelihood",
     "type": "Eid Gifts",
     "href": "/",
@@ -40,7 +40,7 @@
     "value": 50
   },
   {
-    "image": "/assets/logo.png",
+    "image": "/assets/zakatulFitr.jpg",
     "category": "Livelihood",
     "type": "Zakat-ul-Fitr",
     "href": "/",
