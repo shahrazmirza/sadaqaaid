@@ -47,7 +47,7 @@ const UrgentAppeals = () => {
 
   return (
     <Container>
-      <h1 className="font-heading1 md:text-5xl text-3xl text-center leading-loose pt-10 md:pt-20 md:pb-10">Urgent Causes</h1>
+      <h1 className="font-heading1 md:text-5xl text-3xl text-center leading-loose pt-0 md:pt-10 md:pb-10">Urgent Appeals</h1>
       <ul className="md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7">
         {uniqueDonationTypes.map((donationType, index) => (
           <li key={index}>

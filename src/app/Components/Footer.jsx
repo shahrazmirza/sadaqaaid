@@ -20,7 +20,7 @@ const Footer = () => {
     }, [isInView]);
 
   return (
-    <div className='pt- pt-10 pb-5 bg-gray-100 px-7'>
+    <div className='pt-10 md:mt-20 mt-10 pb-5 bg-gray-100 px-7'>
       <Container>
         <div className='md:flex'>
           <div>
