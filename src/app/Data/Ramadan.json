@@ -1,192 +1,192 @@
 [
   {
-    "image": "/assets/supportgaza.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Support Gaza",
+    "type": "Ramadan Food Packs",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/ramadanmeals.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Ramadan Meals",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/feedthefasting.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Kaffarah",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/aidforyemen.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Aid for Yemen",
+    "type": "Fidya",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/consistentdonations.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Consistent Donations",
+    "type": "Eid Gifts",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/sadaqazakat.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Sadaqa or Zakat",
+    "type": "Zakat-ul-Fitr",
     "href": "/",
     "color": "danger",
     "value": 50
   },
   {
-    "image": "/assets/supportgaza.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Support Gaza",
+    "type": "Ramadan Food Packs",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/ramadanmeals.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Ramadan Meals",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/feedthefasting.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Kaffarah",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/aidforyemen.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Aid for Yemen",
+    "type": "Fidya",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/consistentdonations.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Consistent Donations",
+    "type": "Zakat-ul-Fitr",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/sadaqazakat.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Sadaqa or Zakat",
+    "type": "Eid Gifts",
     "href": "/",
     "color": "danger",
     "value": 100
   },
   {
-    "image": "/assets/supportgaza.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Support Gaza",
+    "type": "Ramadan Food Packs",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/ramadanmeals.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Ramadan Meals",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/feedthefasting.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Kaffarah",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/aidforyemen.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Aid for Yemen",
+    "type": "Fidya",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/consistentdonations.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Consistent Donations",
+    "type": "Zakat-ul-Fitr",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/sadaqazakat.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Sadaqa or Zakat",
+    "type": "Eid Gifts",
     "href": "/",
     "color": "danger",
     "value": 250
   },
   {
-    "image": "/assets/supportgaza.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Support Gaza",
+    "type": "Ramadan Food Packs",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/ramadanmeals.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Ramadan Meals",
+    "type": "Iftar",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/feedthefasting.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Feed the Fasting",
+    "type": "Kaffarah",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/aidforyemen.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Aid for Yemen",
+    "type": "Fidya",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/consistentdonations.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Consistent Donations",
+    "type": "Eid Gifts",
     "href": "/",
     "color": "danger",
     "value": 500
   },
   {
-    "image": "/assets/sadaqazakat.jpg",
+    "image": "/assets/logo.png",
     "category": "Livelihood",
-    "type": "Sadaqa or Zakat",
+    "type": "Zakat-ul-Fitr",
     "href": "/",
     "color": "danger",
     "value": 500

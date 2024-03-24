@@ -6,9 +6,9 @@ import { Container } from '@radix-ui/themes';
 import { RadioGroup, Radio, Input } from '@nextui-org/react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import data from '../Data/UrgentAppeals.json';
+import data from '../Data/Projects.json';
 
-const UrgentAppeals = () => {
+const ProjectsContent = () => {
   const [items, setItems] = useState([]);
   const [selectedAmount, setSelectedAmount] = useState(0);
   const [customAmountInputValue, setCustomAmountInputValue] = useState('');
@@ -45,7 +45,6 @@ const UrgentAppeals = () => {
 
   return (
     <Container>
-      <h1 className="font-heading1 md:text-5xl text-3xl text-center leading-loose pt-0 md:pt-10 md:pb-10">Urgent Appeals</h1>
       <ul className="md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7">
         {uniqueDonationTypes.map((donationType, index) => {
           const currentItem = items.find(item => item.type === donationType);
@@ -114,4 +113,4 @@ const UrgentAppeals = () => {
   );
 };
 
-export default UrgentAppeals;
+export default ProjectsContent;

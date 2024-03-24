@@ -1,0 +1,98 @@
+[
+  {
+    "image": "/assets/pakistanschool.jpg",
+    "category": "Education",
+    "type": "Pakistan School",
+    "href": "/",
+    "color": "success",
+    "value": 50
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Health",
+    "type": "Pakistan Surgeries",
+    "color": "warning",
+    "href": "/",
+    "value": 50
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Livelihood",
+    "type": "Pakistan Water Stations",
+    "color": "danger",
+    "href": "/",
+    "value": 50
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Education",
+    "type": "Pakistan School",
+    "href": "/",
+    "color": "success",
+    "value": 100
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Health",
+    "type": "Pakistan Surgeries",
+    "color": "warning",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Livelihood",
+    "type": "Pakistan Water Stations",
+    "color": "danger",
+    "href": "/",
+    "value": 100
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Education",
+    "type": "Pakistan School",
+    "href": "/",
+    "color": "success",
+    "value": 250
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Health",
+    "type": "Pakistan Surgeries",
+    "color": "warning",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Livelihood",
+    "type": "Pakistan Water Stations",
+    "color": "danger",
+    "href": "/",
+    "value": 250
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Education",
+    "type": "Pakistan School",
+    "href": "/",
+    "color": "success",
+    "value": 500
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Health",
+    "type": "Pakistan Surgeries",
+    "color": "warning",
+    "href": "/",
+    "value": 500
+  },
+  {
+    "image": "/assets/logo.png",
+    "category": "Livelihood",
+    "type": "Pakistan Water Stations",
+    "color": "danger",
+    "href": "/",
+    "value": 500
+  }
+]
