@@ -59,7 +59,7 @@ const UrgentCauses = () => {
                   width={500} 
                   height={500} 
                 />
-                <div className="flex flex-col border-solid border shadow-md">
+                <div className="flex flex-col border-solid border rounded-b-lg shadow-md">
                   <div className="flex flex-col justify-start px-4 pt-4">
                     <Chip radius="sm" color={currentItem.color}>
                       {currentItem.category}
