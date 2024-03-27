@@ -58,7 +58,7 @@ function Togglemenu() {
                   href="/Ramadan">
                   Ramadan
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
+                <ul className='grid grid-cols-2 gap-0 text-xs leading-8'>
                   <Link href="/Ramadan"><Chip radius="sm">Ramadan Meals</Chip></Link>
                   <Link href="/Ramadan"><Chip radius="sm">Iftar</Chip></Link>
                   <Link href="/Ramadan"><Chip radius="sm">Kaffarah</Chip></Link>
@@ -74,7 +74,7 @@ function Togglemenu() {
                   href="/Appeals">
                   Appeals
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
+                <ul className='grid grid-cols-2 gap-0 text-xs leading-8'>
                   <Link href="/Appeals"><Chip radius="sm">Palestine Gaza Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Yemen Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Syria Relief</Chip></Link>
@@ -93,7 +93,7 @@ function Togglemenu() {
                   href="/Projects">
                   Projects
                 </NavigationMenu.Link>
-                <ul className='grid grid-cols-2 gap-1 text-xs leading-8'>
+                <ul className='grid grid-cols-2 gap-0 text-xs leading-8'>
                   <Link href="/Projects"><Chip radius="sm">Pakistan School</Chip></Link>
                   <Link href="/Projects"><Chip radius="sm">Pakistan Surgeries</Chip></Link>
                   <Link href="/Projects"><Chip radius="sm">Pakistan Water Stations</Chip></Link>
@@ -113,63 +113,3 @@ function Togglemenu() {
 }
 
 export default Togglemenu;
-
-// 'use client'
-// import React from 'react';
-// import classNames from 'classnames';
-// import { CaretDownIcon, Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
-// import Link from 'next/link';
-// import { useState, useEffect } from 'react';
-// import Image from 'next/image';
-// import data from '../Data/NavbarItems.json';
-
-// function Togglemenu() {
-//   const [items, setItems] = useState([]);
- 
-//   const [showDiv, setShowDiv] = useState(false);
-
-//   const toggleDiv = () => {
-//     setShowDiv(!showDiv);
-//   };
-
-//   useEffect(() => {
-//     setItems(data);
-//   }, []);
-
-//   return (
-//     <div>
-//       <div className='flex justify-between h-10 items-center py-7'>
-//         <div className='flex justify-center items-center p-5 gap-2'>
-//           <Link href="/">
-//             <Image
-//               src='/assets/logo.png'
-//               alt='Logo'
-//               width={30}
-//               height={30}
-//               className=''
-//             />
-//           </Link>
-//           <Link href="/">
-//             <h1 className='bold'>SADAQA AID</h1>
-//           </Link>
-//         </div>
-//         <button className='flex text-gray-800 bg-gray-100 justify-center w-12 h-16 pt-6' onClick={toggleDiv}>
-//         {showDiv ? <Cross1Icon /> : <HamburgerMenuIcon />}
-//         </button>
-//       </div>
-//         {showDiv && 
-//         <div className='bg-gray-100 px-4 py-2 h-screen'>
-//           <ul>
-//             {items.map((items, index) => (
-//               <Link key={index} className={items.classNameToggleMenu} href={items.href}>
-//                 {items.category}
-//               </Link>
-//             ))}
-//           </ul>
-//       </div>
-//       }
-//     </div>
-//   );
-// }
-
-// export default Togglemenu;
