@@ -17,13 +17,14 @@ const Hero = () => {
           className=''
         />
       </div>
+      <div className='absolute inset-0 overflow-hidden bg-black opacity-70'></div>
       <div className='absolute inset-0 overflow-hidden'>
         <Image
           src='/assets/lebanon_flag.png'
           alt='Hero Image'
           layout='fill'
           objectFit='cover'
-          className='opacity-25'
+          className='opacity-0'
         />
       </div>
       <div className='absolute right-0 left-0 top-0 bottom-0'>
