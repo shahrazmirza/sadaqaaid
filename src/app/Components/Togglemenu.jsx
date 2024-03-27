@@ -75,7 +75,7 @@ function Togglemenu() {
                   Appeals
                 </NavigationMenu.Link>
                 <ul className='grid grid-cols-2 gap-0 text-xs leading-8'>
-                  <Link href="/Appeals"><Chip radius="sm">Palestine Gaza Appeal</Chip></Link>
+                  <Link href="/Appeals"><Chip radius="sm">Palestine Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Yemen Appeal</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Syria Relief</Chip></Link>
                   <Link href="/Appeals"><Chip radius="sm">Afghanistan Emergency</Chip></Link>
