@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Container } from '@radix-ui/themes';
-import { MdLocalPhone, MdLocationOn, MdEmail } from "react-icons/md";
+import { MdLocalPhone, MdLocationOn, MdEmail, MdCopyright } from "react-icons/md";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { motion, useInView, useAnimation } from "framer-motion";
 
@@ -146,10 +146,12 @@ const Footer = () => {
                 <p className='text-l/snug font-normal text-gray-500 leading-10 shrink-0'>56 Valencia Blvd, Doreen VIC 3754</p>
               </div> */}
           </motion.div>
-          
-          <div>
-            
-          </div>
+        </div>
+        <div className='md:text-base text-sm text-gray-800 pt-5 md:flex md:gap-1 md:justify-center md:items-center'>
+           <div className='flex gap-1 justify-center items-center'>
+            <MdCopyright /><p>2024 Sadaqa Aid Incorporated</p>
+           </div>
+           <p className='text-center'>(ABN 39 290 059 100)</p>
         </div>
       </Container>
     </div>
