@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Scroll_to_top from '../Components/Scroll_to_top';
 import Whatsapp from '../Components/Whatsapp'
 import AppealsContent from '../Components/AppealsContent'
 import Footer from '../Components/Footer'
@@ -8,6 +9,7 @@ const Appeals = () => {
   return (
     <div className='mh-screen'>
       <Navbar />
+      <Scroll_to_top />
       <Whatsapp />
       <div className='flex justify-center items-center relative'>
         <div className='relative z-10'>

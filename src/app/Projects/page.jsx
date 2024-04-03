@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Scroll_to_top from '../Components/Scroll_to_top';
 import Whatsapp from '../Components/Whatsapp'
 import ProjectsContent from '../Components/ProjectsContent'
 import Footer from '../Components/Footer'
@@ -8,6 +9,7 @@ const Projects = () => {
   return (
     <div className='mh-screen'>
       <Navbar />
+      <Scroll_to_top />
       <Whatsapp />
       <div className='flex justify-center items-center relative'>
         <div className='relative z-10'>
