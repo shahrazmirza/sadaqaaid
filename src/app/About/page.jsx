@@ -38,7 +38,7 @@ const About = () => {
                 className='rounded-t-xl' 
               />
               <div className='flex flex-col gap-5 p-5'>
-                <h1 className='md:text-2xl font-medium text-xl pt-4'>Our vision</h1>
+                <h1 className='md:text-2xl font-bold text-xl pt-4'>Our vision</h1>
                 <p>Our vision at Sadaqa Aid Incorporated is to create a world where communities thrive, social obligations are fulfilled, justice prevails, and people unite in solidarity to alleviate suffering, ensuring dignity, opportunity, and essential resources for all individuals.</p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const About = () => {
                 className='rounded-t-xl'
               />
               <div className='flex flex-col gap-5 p-5'>
-                <h1 className='md:text-2xl font-medium text-xl pt-4'>Our mission</h1>
+                <h1 className='md:text-2xl font-bold text-xl pt-4'>Our mission</h1>
                 <p>Our mission at Sadaqa Aid Incorporated is to mobilise resources, build partnerships, and empower communities to mitigate disasters, promote sustainable development, support the marginalised, empower individuals through education, and advance gender equality, thereby advocating for the rights and dignity of all individuals.</p>
               </div>
             </div>
