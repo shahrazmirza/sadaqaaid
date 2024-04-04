@@ -6,7 +6,6 @@ import Hero from './Components/Hero'
 import Causes from './Components/Causes'
 import UrgentCauses from './Components/UrgentCauses';
 import UrgentAppeals from './Components/UrgentAppeals';
-import Homeless from './Components/Homeless';
 import Footer from '../app/Components/Footer';
 
 export default async function Home() {

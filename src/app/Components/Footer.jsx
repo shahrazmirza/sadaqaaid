@@ -61,7 +61,7 @@ const Footer = () => {
             initial = 'initial'
             animate={fadeControls}
             className='text-l/snug font-normal leading-6'
-            >Sadaqa Aid is a charity that works to provide assistance and development programs globally, with a focus on emergency relief, healthcare, education, clean water, and sustainable livelihoods. We operate in areas affected by conflict, disasters, and poverty, aiming to empower communities and alleviate suffering through our initiatives.</motion.p>
+            >Established in 2024, Sadaqa Aid Incorporated is a humanitarian and development organisation headquartered in Dubbo, NSW, Australia. Our roots are firmly grounded in Islamic values, which serve as the cornerstone of our mission to empower the less fortunate on a global scale. At Sadaqa Aid, we believe that every individual possesses a God-given purpose, and it is our duty to alleviate suffering and help individuals fulfill their potential.</motion.p>
             <motion.div
             ref={ref} 
             variants={{ 
@@ -72,7 +72,7 @@ const Footer = () => {
             animate={fadeControls}
             >
               <Link className='text-l/snug font-normal text-gray-500 leading-10'
-              href="/Contact">Learn more</Link>
+              href="/About">Learn more</Link>
             </motion.div>
             
             {/* <motion.div 

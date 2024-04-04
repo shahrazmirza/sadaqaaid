@@ -6,6 +6,12 @@
     "href": "/"
   },
   {
+    "category": "About Us",
+    "classNameNavMenu": "px-6 text-white",
+    "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",
+    "href": "/About"
+  },
+  {
     "category": "Ramadan",
     "classNameNavMenu": "px-6 text-white",
     "classNameToggleMenu": "flex px-5 py-2 font-medium leading-none my-1 hover:text-gray-700",

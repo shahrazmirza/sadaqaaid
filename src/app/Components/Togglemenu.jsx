@@ -55,6 +55,14 @@ function Togglemenu() {
               <NavigationMenu.Item>
                 <NavigationMenu.Link
                   className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
+                  href="/About">
+                  About Us
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+
+              <NavigationMenu.Item>
+                <NavigationMenu.Link
+                  className="font-heading1 flex text-xl py-2 font-medium leading-none my-1 hover:text-gray-800" 
                   href="/Ramadan">
                   Ramadan
                 </NavigationMenu.Link>
