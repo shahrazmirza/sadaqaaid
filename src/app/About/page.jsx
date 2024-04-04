@@ -39,7 +39,7 @@ const About = () => {
               />
               <div className='flex flex-col gap-5 p-5'>
                 <h1 className='text-2xl font-bold pt-4'>Our vision</h1>
-                <p>Our vision at Sadaqa Aid Incorporated is to create a world where communities thrive, social obligations are fulfilled, justice prevails, and people unite in solidarity to alleviate suffering, ensuring dignity, opportunity, and essential resources for all individuals.</p>
+                <p>To create a world where communities thrive, social obligations are fulfilled, justice prevails, and people unite in solidarity to alleviate suffering, ensuring dignity, opportunity, and essential resources for all individuals.</p>
               </div>
             </div>
             <div className='col-span-1 border-solid border-b rounded-xl shadow-md'>
@@ -52,7 +52,7 @@ const About = () => {
               />
               <div className='flex flex-col gap-5 p-5'>
                 <h1 className='text-2xl font-bold pt-4'>Our mission</h1>
-                <p>Our mission at Sadaqa Aid Incorporated is to mobilise resources, build partnerships, and empower communities to mitigate disasters, promote sustainable development, support the marginalised, empower individuals through education, and advance gender equality, thereby advocating for the rights and dignity of all individuals.</p>
+                <p>To mobilise resources, build partnerships, and empower communities to mitigate disasters, promote sustainable development, support the marginalised, empower individuals through education, and advance gender equality, thereby advocating for the rights and dignity of all individuals.</p>
               </div>
             </div>
           </div>
