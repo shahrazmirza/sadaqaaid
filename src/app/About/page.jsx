@@ -29,7 +29,7 @@ const About = () => {
           <p>Driven by compassion and a vision for a more equitable world, we are dedicated to fighting poverty, alleviating suffering, and addressing injustices wherever they exist. Our organisation operates through a network of committed volunteers, donors, community members, partners, and staff, all working together to bring about positive change in the world.</p>
           <h1 className="md:text-3xl font-medium text-2xl py-4">Vision and mission</h1>
           <div className='grid md:grid-cols-4 grid-cols-1 gap-10'>
-            <div className='col-span-1 border-solid border rounded-xl shadow-md'>
+            <div className='col-span-1 border-solid border-b rounded-xl shadow-md'>
               <Image 
                 src={visionImage} 
                 alt='visionImage' 
@@ -42,7 +42,7 @@ const About = () => {
                 <p>Our vision at Sadaqa Aid Incorporated is to create a world where communities thrive, social obligations are fulfilled, justice prevails, and people unite in solidarity to alleviate suffering, ensuring dignity, opportunity, and essential resources for all individuals.</p>
               </div>
             </div>
-            <div className='col-span-1 col-span-1 border-solid border rounded-xl shadow-md'>
+            <div className='col-span-1 border-solid border-b rounded-xl shadow-md'>
               <Image 
                 src={missionImage} 
                 alt='missionImage' 
