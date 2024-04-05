@@ -56,8 +56,8 @@ const UrgentAppeals = () => {
                 <Image 
                   src={currentItem.image} 
                   alt={donationType} 
-                  width={500} 
-                  height={500} 
+                  width={700} 
+                  height={700} 
                 />
                 <div className="flex flex-col border-solid border rounded-b-lg shadow-md">
                   <div className="flex flex-col justify-start px-4 pt-4">
