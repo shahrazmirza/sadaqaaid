@@ -16,7 +16,6 @@ export default function DonationBox() {
   const [customAmountInputValue, setCustomAmountInputValue] = useState("");
 
   useEffect(() => {
-    // Fetch or set the items data
     setItems(data);
   }, []);
 
@@ -36,8 +35,7 @@ export default function DonationBox() {
         return toast.error("Please select or enter a donation amount");
       }
       
-      // Convert to appropriate format
-      const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : donationType === 'zakat' ? 'Zakat' : 'Zakat-al-Fitr';
+      const formattedDonationType = donationType === 'sadaqa' ? 'Sadaqa' : donationType === 'zakat' ? 'Zakat' : 'Campaign';
 
       const response = await axios.post('/api/checkout_sessions', {
         amount: amount,
@@ -67,10 +65,10 @@ export default function DonationBox() {
             >
               <Radio value="sadaqa" size="lg">Sadaqa</Radio>
               <Radio value="zakat" size="lg">Zakat</Radio>
-              <Radio value="zakatAlFitr" size="lg">Zakat-al-Fitr</Radio>
+              <Radio value="campaign" size="lg">Campaign</Radio>
             </RadioGroup>
 
-            {(donationType === "sadaqa" || donationType === "zakat" || donationType === "zakatAlFitr") && (
+            {(donationType === "sadaqa" || donationType === "zakat" || donationType === "campaign") && (
               <RadioGroup
               label="Select Amount"
               orientation="horizontal"

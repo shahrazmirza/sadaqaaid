@@ -40,23 +40,23 @@
     "value": 1000
   },
   {
-    "type": "zakatAlFitr",
+    "type": "campaign",
     "value": 50
   },
   {
-    "type": "zakatAlFitr",
+    "type": "campaign",
     "value": 100
   },
   {
-    "type": "zakatAlFitr",
+    "type": "campaign",
     "value": 250
   },
   {
-    "type": "zakatAlFitr",
+    "type": "campaign",
     "value": 500
   },
   {
-    "type": "zakatAlFitr",
+    "type": "campaign",
     "value": 1000
   }
 ]
