@@ -1,33 +1,32 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import 'animate.css';
-import DonationBox from '../Components/DonationBox';
-import { Container } from '@radix-ui/themes';
-
+import Image from "next/image";
+import Link from "next/link";
+import "animate.css";
+import DonationBox from "../Components/DonationBox";
+import { Container } from "@radix-ui/themes";
 
 const Hero = () => {
   return (
-    <div className='h-screen relative z-0'>
-      <div className='absolute inset-0 overflow-hidden'>
+    <div className="h-screen relative z-0">
+      <div className="absolute inset-0 overflow-hidden">
         <Image
-          src='/assets/hero1.jpg'
-          alt='Hero Image'
-          layout='fill'
-          objectFit='cover'
-          className=''
+          src="/assets/hero1.jpg"
+          alt="Hero Image"
+          layout="fill"
+          objectFit="cover"
+          className=""
         />
       </div>
-      <div className='absolute inset-0 overflow-hidden bg-black opacity-70'></div>
-      <div className='absolute inset-0 overflow-hidden'>
+      <div className="absolute inset-0 overflow-hidden bg-black opacity-70"></div>
+      <div className="absolute inset-0 overflow-hidden">
         <Image
-          src='/assets/lebanon_flag.png'
-          alt='Hero Image'
-          layout='fill'
-          objectFit='cover'
-          className='opacity-0'
+          src="/assets/lebanon_flag.png"
+          alt="Hero Image"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-0"
         />
       </div>
-      <div className='absolute right-0 left-0 top-0 bottom-0'>
+      <div className="absolute right-0 left-0 top-0 bottom-0">
         <DonationBox />
       </div>
     </div>
@@ -35,7 +34,6 @@ const Hero = () => {
 };
 
 export default Hero;
-
 
 // import Image from 'next/image';
 // import Link from 'next/link';
@@ -74,7 +72,7 @@ export default Hero;
 //         </div>
 //       </Container>
 //       <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-center items-end h-screen pb-20"> {/* Adjust margin top as needed */}
-//         <div className="flex space-x-2"> 
+//         <div className="flex space-x-2">
 //           <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
 //           <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>
 //           <div className="w-2 h-2 bg-white hover:bg-yellow-400 rounded-full"></div>

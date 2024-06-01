@@ -1,17 +1,17 @@
-'use client'
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { Chip } from '@nextui-org/react';
-import { Container } from '@radix-ui/themes';
-import { RadioGroup, Radio, Input } from '@nextui-org/react';
-import { toast } from 'react-toastify';
-import axios from 'axios';
-import data from '../Data/Appeals.json';
+"use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { Chip } from "@nextui-org/react";
+import { Container } from "@radix-ui/themes";
+import { RadioGroup, Radio, Input } from "@nextui-org/react";
+import { toast } from "react-toastify";
+import axios from "axios";
+import data from "../Data/Appeals.json";
 
 const AppealsContent = () => {
   const [items, setItems] = useState([]);
   const [selectedAmount, setSelectedAmount] = useState(0);
-  const [customAmountInputValue, setCustomAmountInputValue] = useState('');
+  const [customAmountInputValue, setCustomAmountInputValue] = useState("");
 
   useEffect(() => {
     setItems(data);
@@ -21,64 +21,75 @@ const AppealsContent = () => {
     try {
       let amount = selectedAmount;
 
-      if (amount === 0 && customAmountInputValue.trim() !== '') {
+      if (amount === 0 && customAmountInputValue.trim() !== "") {
         amount = parseFloat(customAmountInputValue.trim());
       }
 
       if (amount === 0) {
-        return toast.error('Please select or enter a donation amount');
+        return toast.error("Please select or enter a donation amount");
       }
 
-      const response = await axios.post('/api/checkout_sessions', {
+      const response = await axios.post("/api/checkout_sessions", {
         amount: amount,
         donationType: donationType,
       });
       console.log(response);
       window.location = response.data.sessionURL;
     } catch (error) {
-      console.error('Error creating checkout session:', error);
+      console.error("Error creating checkout session:", error);
       toast.error(error.message);
     }
   };
 
-  const uniqueDonationTypes = [...new Set(items.map(item => item.type))];
+  const uniqueDonationTypes = [...new Set(items.map((item) => item.type))];
 
   return (
     <Container>
       <ul className="md:grid md:grid-cols-3 md:gap-10 md:py-10 grid gap-y-6 p-7">
         {uniqueDonationTypes.map((donationType, index) => {
-          const currentItem = items.find(item => item.type === donationType);
+          const currentItem = items.find((item) => item.type === donationType);
           if (!currentItem) return null;
           return (
             <li key={index}>
               <div>
-                <Image 
-                  src={currentItem.image} 
-                  alt={donationType} 
-                  width={500} 
-                  height={500} 
+                <Image
+                  src={currentItem.image}
+                  alt={donationType}
+                  width={500}
+                  height={500}
                 />
                 <div className="flex flex-col border-solid border rounded-b-lg shadow-md">
                   <div className="flex flex-col justify-start px-4 pt-4">
                     <Chip radius="sm" color={currentItem.color}>
                       {currentItem.category}
                     </Chip>
-                    <h className="md:text-xl font-medium text-lg pt-4">{donationType}</h>
+                    <h className="md:text-xl font-medium text-lg pt-4">
+                      {donationType}
+                    </h>
                   </div>
-                  <RadioGroup label="Select Amount" orientation="horizontal" defaultValue="custom" className="p-4">
+                  <RadioGroup
+                    label="Select Amount"
+                    orientation="horizontal"
+                    defaultValue="custom"
+                    className="p-4"
+                  >
                     <div className="flex flex-col justify-center items-center">
                       <ul className="flex gap-2">
-                        {items.filter(item => item.type === donationType).map((item, index) => (
-                          <li key={index}>
-                            <Radio
-                              className="pr-1 md:pr-2"
-                              value={item.value}
-                              onChange={() => setSelectedAmount(parseFloat(item.value))}
-                            >
-                              ${item.value}
-                            </Radio>
-                          </li>
-                        ))}
+                        {items
+                          .filter((item) => item.type === donationType)
+                          .map((item, index) => (
+                            <li key={index}>
+                              <Radio
+                                className="pr-1 md:pr-2"
+                                value={item.value}
+                                onChange={() =>
+                                  setSelectedAmount(parseFloat(item.value))
+                                }
+                              >
+                                ${item.value}
+                              </Radio>
+                            </li>
+                          ))}
                       </ul>
                       <p className="p-2">OR</p>
                       <div className="w-36">
@@ -89,10 +100,12 @@ const AppealsContent = () => {
                           variant="bordered"
                           placeholder=""
                           defaultValue=""
-                          onClear={() => console.log('input cleared')}
+                          onClear={() => console.log("input cleared")}
                           className="max-w-xs"
                           size="sm"
-                          onChange={(e) => setCustomAmountInputValue(e.target.value)}
+                          onChange={(e) =>
+                            setCustomAmountInputValue(e.target.value)
+                          }
                         />
                       </div>
                     </div>
