@@ -20,24 +20,14 @@
     "value": 1000
   },
   {
-    "type": "zakat",
-    "value": 50
+    "type": "qurban",
+    "value": 210,
+    "category": "Cow"
   },
   {
-    "type": "zakat",
-    "value": 100
-  },
-  {
-    "type": "zakat",
-    "value": 250
-  },
-  {
-    "type": "zakat",
-    "value": 500
-  },
-  {
-    "type": "zakat",
-    "value": 1000
+    "type": "qurban",
+    "value": 380,
+    "category": "Goat"
   },
   {
     "type": "campaign",

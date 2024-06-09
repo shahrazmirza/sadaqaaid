@@ -37,8 +37,8 @@ export default function DonationBox() {
       const formattedDonationType =
         donationType === "sadaqa"
           ? "Sadaqa"
-          : donationType === "zakat"
-          ? "Zakat"
+          : donationType === "qurban"
+          ? "Qurban"
           : "Campaign";
 
       const response = await axios.post("/api/checkout_sessions", {
@@ -73,17 +73,15 @@ export default function DonationBox() {
               <Radio value="sadaqa" size="lg">
                 Sadaqa
               </Radio>
-              <Radio value="zakat" size="lg">
-                Zakat
+              <Radio value="qurban" size="lg">
+                Qurban
               </Radio>
               <Radio value="campaign" size="lg">
                 Campaign
               </Radio>
             </RadioGroup>
 
-            {(donationType === "sadaqa" ||
-              donationType === "zakat" ||
-              donationType === "campaign") && (
+            {(donationType === "sadaqa" || donationType === "campaign") && (
               <RadioGroup
                 label="Select Amount"
                 orientation="horizontal"
@@ -126,6 +124,35 @@ export default function DonationBox() {
                       }
                     />
                   </div>
+                </div>
+              </RadioGroup>
+            )}
+
+            {donationType === "qurban" && (
+              <RadioGroup
+                label="Select Amount"
+                orientation="horizontal"
+                defaultValue="custom"
+                className=""
+              >
+                <div className="flex flex-col items-center">
+                  <ul className="flex gap-2">
+                    {items
+                      .filter((item) => item.type === donationType)
+                      .map((item, index) => (
+                        <li key={index}>
+                          <Radio
+                            className="py-1 md:py-2 pr-1"
+                            value={item.value}
+                            onChange={() =>
+                              setSelectedAmount(parseFloat(item.value))
+                            }
+                          >
+                            ${item.value} ({item.category})
+                          </Radio>
+                        </li>
+                      ))}
+                  </ul>
                 </div>
               </RadioGroup>
             )}
