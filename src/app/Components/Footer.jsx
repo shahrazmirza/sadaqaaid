@@ -209,7 +209,7 @@ const Footer = () => {
                 <MdLocalPhone />
               </div>
               <p className="text-l/snug font-normal text-gray-500 leading-10">
-                0403 320 350
+                0411 456 467
               </p>
             </div>
 

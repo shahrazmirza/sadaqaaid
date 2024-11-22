@@ -92,7 +92,7 @@ export const ContactForm = () => {
               <MdLocalPhone />
             </div>
             <p className="text-base/loose font-normal text-gray-800">
-              0403 320 350
+              0411 456 467
             </p>
           </div>
           {/* <p className='text-lg/loose font-normal md:text-xl/loose md:font-normal text-gray-500'>Email us</p>
